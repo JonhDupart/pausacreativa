@@ -196,6 +196,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     position: relative;
+    
 }
 
 main,
@@ -8202,4 +8203,6 @@ body.mobile-menu-open {
         padding: 22px !important;
     }
 }
+
+
 }
