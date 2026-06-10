@@ -11,8 +11,6 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
-    <!-- Spline Viewer para usar escenas 3D sin React -->
-    <script type="module" src="https://unpkg.com/@splinetool/viewer/build/spline-viewer.js"></script>
 
     <script id="tailwind-config">
         tailwind.config = {
@@ -111,7 +109,183 @@
    FIX GLOBAL RESPONSIVE / ANTI OVERFLOW MOBILE
    Se coloca al inicio para normalizar medidas sin cambiar identidad visual.
    ========================================================== */
+/* ===========================
+   HERO SPLINE OPTIMIZADO
+   NO CARGA SPLINE EN MÓVIL
+   =========================== */
 
+.hero-mobile-fallback {
+    display: none;
+}
+
+.spline-hero-card {
+    isolation: isolate;
+}
+
+/* Estado mientras Spline carga en escritorio */
+.spline-full-canvas.is-loading::after {
+    content: "";
+    position: absolute;
+    right: 12%;
+    top: 50%;
+    width: 42px;
+    height: 42px;
+    z-index: 6;
+    border-radius: 9999px;
+    border-top: 3px solid rgba(136, 217, 130, 1);
+    border-right: 3px solid transparent;
+    animation: rotation 1s linear infinite;
+    opacity: 0.85;
+}
+
+/* Evita que el visor cree desbordes raros */
+#heroSplineFrame,
+.hero-spline-viewer {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* Móvil: ocultamos por completo la capa Spline */
+@media (max-width: 768px) {
+    .spline-full-canvas {
+        display: none;
+    }
+
+    .hero-mobile-fallback {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: block;
+        overflow: hidden;
+        pointer-events: none;
+        background:
+            radial-gradient(circle at 50% 20%, rgba(136, 217, 130, 0.14), transparent 34%),
+            radial-gradient(circle at 82% 28%, rgba(0, 218, 243, 0.12), transparent 38%),
+            radial-gradient(circle at 50% 85%, rgba(255, 182, 145, 0.08), transparent 42%),
+            rgba(0, 0, 0, 0.72);
+    }
+
+    .hero-mobile-fallback-grid {
+        position: absolute;
+        inset: 0;
+        background-image:
+            linear-gradient(rgba(255,255,255,0.032) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.032) 1px, transparent 1px);
+        background-size: 42px 42px;
+        mask-image: radial-gradient(circle at 50% 42%, black 0%, transparent 76%);
+        opacity: 0.7;
+    }
+
+    .hero-mobile-fallback-orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(72px);
+    }
+
+    .hero-mobile-fallback-orb-one {
+        width: 280px;
+        height: 280px;
+        top: 7%;
+        left: -80px;
+        background: rgba(136, 217, 130, 0.16);
+    }
+
+    .hero-mobile-fallback-orb-two {
+        width: 320px;
+        height: 320px;
+        right: -100px;
+        bottom: 10%;
+        background: rgba(0, 218, 243, 0.12);
+    }
+
+    .hero-mobile-bot-shape {
+        position: absolute;
+        left: 50%;
+        bottom: 36px;
+        width: 230px;
+        height: 230px;
+        transform: translateX(-50%);
+        opacity: 0.32;
+        animation: hero-mobile-float 6s ease-in-out infinite;
+    }
+
+    .hero-mobile-bot-head {
+        position: absolute;
+        inset: 34px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 42px;
+        color: rgba(5, 38, 10, 0.92);
+        background:
+            radial-gradient(circle at 30% 20%, rgba(255, 255, 255, 0.98), rgba(136, 217, 130, 0.82) 46%, rgba(0, 218, 243, 0.32) 100%);
+        box-shadow:
+            0 24px 70px rgba(0, 0, 0, 0.38),
+            inset 0 1px 0 rgba(255, 255, 255, 0.55);
+    }
+
+    .hero-mobile-bot-head .material-symbols-outlined {
+        font-size: 76px;
+    }
+
+    .hero-mobile-bot-glow {
+        position: absolute;
+        inset: 0;
+        border-radius: 9999px;
+        background:
+            radial-gradient(circle, rgba(136, 217, 130, 0.28), transparent 68%);
+        filter: blur(22px);
+    }
+
+    @keyframes hero-mobile-float {
+        0%, 100% {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(-16px);
+        }
+    }
+
+    .spline-readable-overlay {
+        z-index: 4;
+        background:
+            radial-gradient(
+                circle at 50% 42%,
+                rgba(0, 0, 0, 0.84) 0%,
+                rgba(0, 0, 0, 0.76) 34%,
+                rgba(0, 0, 0, 0.54) 62%,
+                rgba(0, 0, 0, 0.30) 100%
+            );
+    }
+
+    .mouse-spotlight {
+        display: none;
+    }
+
+    .spline-hero-card {
+        min-height: 620px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-mobile-bot-shape {
+        width: 190px;
+        height: 190px;
+        bottom: 26px;
+        opacity: 0.26;
+    }
+
+    .hero-mobile-bot-head {
+        inset: 30px;
+        border-radius: 34px;
+    }
+
+    .hero-mobile-bot-head .material-symbols-outlined {
+        font-size: 62px;
+    }
+}
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -7354,23 +7528,42 @@ body.mobile-menu-open {
 <section class="relative pt-32 pb-stack-lg overflow-hidden" id="hero">
 
     <div class="hero-orb-one"></div>
-   
 
     <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10">
 
         <div class="spline-hero-card min-h-[620px]">
 
-            <!-- Canvas 3D ocupando TODO el hero y quedando detrás del contenido -->
-            <div class="spline-full-canvas">
+            <!-- Canvas 3D: en escritorio carga Spline; en móvil NO carga nada pesado -->
+            <div
+                class="spline-full-canvas"
+                id="heroSplineMount"
+                data-spline-url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode">
 
                 <div class="spline-glow"></div>
 
-                <div class="spline-visual-frame">
-                    <spline-viewer
-                        class="hero-spline-viewer"
-                        url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                        events-target="global">
-                    </spline-viewer>
+                <div class="spline-visual-frame" id="heroSplineFrame">
+                    <!-- El spline-viewer se inyecta aquí solo en escritorio -->
+                </div>
+
+            </div>
+
+            <!-- Fondo liviano solo para móvil -->
+            <div class="hero-mobile-fallback" aria-hidden="true">
+
+                <div class="hero-mobile-fallback-orb hero-mobile-fallback-orb-one"></div>
+                <div class="hero-mobile-fallback-orb hero-mobile-fallback-orb-two"></div>
+                <div class="hero-mobile-fallback-grid"></div>
+
+                <div class="hero-mobile-bot-shape">
+
+                    <div class="hero-mobile-bot-head">
+                        <span class="material-symbols-outlined">
+                            smart_toy
+                        </span>
+                    </div>
+
+                    <div class="hero-mobile-bot-glow"></div>
+
                 </div>
 
             </div>
@@ -7389,12 +7582,14 @@ body.mobile-menu-open {
 
                         <span class="inline-flex w-fit items-center justify-center gap-2 px-4 py-2 rounded-full bg-primary-container/90 text-on-primary-container font-label-sm border border-primary/20">
                             <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-                       Stand Outlet Arauco Sopó                        </span>
+                            Stand Outlet Arauco Sopó
+                        </span>
 
                         <div class="space-y-5 flex flex-col items-center">
 
                             <h1 class="font-display-xl text-[44px] leading-[1.06] sm:text-[58px] lg:text-[72px] xl:text-display-xl text-on-surface tracking-[-0.04em] max-w-5xl">
                                 Una pausa puede
+
                                 <span class="hero-gradient-title block">
                                     inspirar una idea.
                                 </span>
@@ -7411,7 +7606,10 @@ body.mobile-menu-open {
                         <div class="flex flex-wrap justify-center gap-4">
                             <a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-sm text-base sm:text-lg hover:scale-105 active:scale-95 transition-all glow-green flex items-center gap-2" href="#startups">
                                 Conocer los emprendimientos
-                                <span class="material-symbols-outlined">arrow_forward</span>
+
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
                             </a>
                         </div>
 
@@ -7421,6 +7619,7 @@ body.mobile-menu-open {
                                 <p class="font-label-sm text-primary mb-2">
                                     01
                                 </p>
+
                                 <p class="text-sm text-on-surface-variant leading-relaxed">
                                     Bienestar y descanso creativo.
                                 </p>
@@ -7430,6 +7629,7 @@ body.mobile-menu-open {
                                 <p class="font-label-sm text-secondary mb-2">
                                     02
                                 </p>
+
                                 <p class="text-sm text-on-surface-variant leading-relaxed">
                                     Ideas colaborativas con propósito.
                                 </p>
@@ -7439,13 +7639,13 @@ body.mobile-menu-open {
                                 <p class="font-label-sm text-tertiary mb-2">
                                     03
                                 </p>
+
                                 <p class="text-sm text-on-surface-variant leading-relaxed">
                                     Experiencia digital e interactiva.
                                 </p>
                             </div>
 
                         </div>
-
 
                     </div>
 
@@ -7460,7 +7660,7 @@ body.mobile-menu-open {
 </section>
 
     <!-- Secciones base para que funcionen los enlaces del menú -->
-    <main>
+    <main class="p-5">
 
    <!-- Sección Obrero Café -->
 <section id="obrero" class="obrero-secti">
@@ -9410,13 +9610,129 @@ body.mobile-menu-open {
         /*
             Inicializador principal.
         */
-        function initPausaCreativa() {
-            initHeroSpotlight();
-            initRevealAnimations();
-            initParallaxCards();
-            initMobileMenu();
-            initFooterScroll3D();
+     function initPausaCreativa() {
+    initLazySplineHero();
+    initHeroSpotlight();
+    initRevealAnimations();
+    initParallaxCards();
+    initMobileMenu();
+    initParticleOutro();
+    initFooterScroll3D();
+}
+
+/*
+    ==========================================================
+    Hero Spline Lazy Load
+    ==========================================================
+    - En escritorio carga el script de Spline y luego la escena.
+    - En móvil NO carga ni el script ni el spline-viewer.
+    - Si el usuario cambia de tamaño a móvil, elimina la escena.
+*/
+function initLazySplineHero() {
+    const mount = qs('#heroSplineMount');
+    const frame = qs('#heroSplineFrame');
+
+    if (!mount || !frame) return;
+
+    const splineUrl = mount.getAttribute('data-spline-url');
+    const desktopQuery = window.matchMedia('(min-width: 769px)');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    let splineScriptLoading = false;
+    let splineScriptLoaded = Boolean(window.customElements && window.customElements.get('spline-viewer'));
+
+    function loadSplineScript(callback) {
+        if (splineScriptLoaded) {
+            callback();
+            return;
         }
+
+        if (splineScriptLoading) {
+            const checkLoaded = window.setInterval(function () {
+                if (window.customElements && window.customElements.get('spline-viewer')) {
+                    window.clearInterval(checkLoaded);
+                    splineScriptLoaded = true;
+                    callback();
+                }
+            }, 80);
+
+            return;
+        }
+
+        splineScriptLoading = true;
+
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'https://unpkg.com/@splinetool/viewer/build/spline-viewer.js';
+        script.onload = function () {
+            splineScriptLoaded = true;
+            splineScriptLoading = false;
+            callback();
+        };
+
+        script.onerror = function () {
+            splineScriptLoading = false;
+            mount.classList.remove('is-loading');
+        };
+
+        document.head.appendChild(script);
+    }
+
+    function createSplineViewer() {
+        if (!splineUrl) return;
+        if (frame.querySelector('spline-viewer')) return;
+
+        mount.classList.add('is-loading');
+
+        loadSplineScript(function () {
+            if (!desktopQuery.matches || reducedMotionQuery.matches) {
+                mount.classList.remove('is-loading');
+                return;
+            }
+
+            const viewer = document.createElement('spline-viewer');
+
+            viewer.className = 'hero-spline-viewer';
+            viewer.setAttribute('url', splineUrl);
+            viewer.setAttribute('events-target', 'global');
+
+            frame.appendChild(viewer);
+
+            window.setTimeout(function () {
+                mount.classList.remove('is-loading');
+            }, 1200);
+        });
+    }
+
+    function destroySplineViewer() {
+        const viewer = frame.querySelector('spline-viewer');
+
+        if (viewer) {
+            viewer.remove();
+        }
+
+        mount.classList.remove('is-loading');
+    }
+
+    function syncSplineState() {
+        if (desktopQuery.matches && !reducedMotionQuery.matches) {
+            createSplineViewer();
+        } else {
+            destroySplineViewer();
+        }
+    }
+
+    syncSplineState();
+
+    if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener('change', syncSplineState);
+        reducedMotionQuery.addEventListener('change', syncSplineState);
+    } else {
+        desktopQuery.addListener(syncSplineState);
+        reducedMotionQuery.addListener(syncSplineState);
+    }
+}
+
 
         /*
             ==========================================================
