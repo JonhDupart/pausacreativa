@@ -2552,6 +2552,21 @@ function initLazySplineHero() {
     - Menos partículas en móvil.
 */
 function initParticleOutro() {
+    /*
+        En móvil NO cargamos el canvas de partículas.
+        Esto evita:
+        - getContext('2d')
+        - creación de partículas
+        - requestAnimationFrame
+        - listeners del mouse
+        - consumo extra de memoria
+    */
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+        return;
+    }
+
     const canvas = qs('#particleTextCanvas');
     const section = qs('.particle-outro-section');
 
@@ -2561,9 +2576,9 @@ function initParticleOutro() {
 
     if (!ctx) return;
 
-    const isMobile = window.innerWidth <= 768;
-    const maxParticles = isMobile ? 680 : 1250;
-    const pixelStep = isMobile ? 10 : 8;
+    const maxParticles = 1250;
+    const pixelStep = 8;
+
     const words = [
         'PAUSA CREATIVA',
         'OBRERO CAFÉ',
@@ -2579,12 +2594,14 @@ function initParticleOutro() {
     let frame = 0;
     let canvasWidth = 0;
     let canvasHeight = 0;
+
     let mouse = {
         x: 0,
         y: 0,
         pressed: false
     };
 
+  
     function randomBetween(min, max) {
         return Math.random() * (max - min) + min;
     }
@@ -2926,74 +2943,80 @@ function initParticleOutro() {
             - data-obrero-parallax
             - data-bit-parallax
         */
-        function initParallaxCards() {
-            if (prefersReducedMotion || !supportsFinePointer) return;
+function initParallaxCards() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
 
-   const parallaxConfigs = [
-    {
-        selector: '[data-obrero-parallax]',
-        intensity: 4
-    },
-    {
-        selector: '[data-bit-parallax]',
-        intensity: 4
-    },
-    {
-        selector: '[data-zipa-parallax]',
-        intensity: 4
-    },
-    {
-        selector: '[data-creatu-parallax]',
-        intensity: 4
-    }
-];
+    /*
+        En móvil NO activamos parallax.
+        Esto evita cálculos con pointermove, requestAnimationFrame y transforms 3D.
+    */
+    if (isMobile || prefersReducedMotion || !supportsFinePointer) return;
 
-            parallaxConfigs.forEach(function (config) {
-                const card = qs(config.selector);
-
-                if (!card) return;
-
-                let frame = null;
-                let targetRotateX = 0;
-                let targetRotateY = 0;
-
-                function applyParallax() {
-                    card.style.transform = `perspective(1200px) rotateX(${targetRotateX.toFixed(2)}deg) rotateY(${targetRotateY.toFixed(2)}deg)`;
-                    frame = null;
-                }
-
-                card.addEventListener('pointermove', function (event) {
-                    const rect = card.getBoundingClientRect();
-
-                    const x = event.clientX - rect.left;
-                    const y = event.clientY - rect.top;
-
-                    const centerX = rect.width / 2;
-                    const centerY = rect.height / 2;
-
-                    targetRotateY = ((x - centerX) / centerX) * config.intensity;
-                    targetRotateX = ((centerY - y) / centerY) * config.intensity;
-
-                    if (!frame) {
-                        frame = window.requestAnimationFrame(applyParallax);
-                    }
-                }, {
-                    passive: true
-                });
-
-                card.addEventListener('pointerleave', function () {
-                    targetRotateX = 0;
-                    targetRotateY = 0;
-
-                    if (frame) {
-                        window.cancelAnimationFrame(frame);
-                        frame = null;
-                    }
-
-                    card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
-                });
-            });
+    const parallaxConfigs = [
+        {
+            selector: '[data-obrero-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-bit-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-zipa-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-creatu-parallax]',
+            intensity: 4
         }
+    ];
+
+    parallaxConfigs.forEach(function (config) {
+        const card = qs(config.selector);
+
+        if (!card) return;
+
+        let frame = null;
+        let targetRotateX = 0;
+        let targetRotateY = 0;
+
+        function applyParallax() {
+            card.style.transform = `perspective(1200px) rotateX(${targetRotateX.toFixed(2)}deg) rotateY(${targetRotateY.toFixed(2)}deg)`;
+            frame = null;
+        }
+
+        card.addEventListener('pointermove', function (event) {
+            const rect = card.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            targetRotateY = ((x - centerX) / centerX) * config.intensity;
+            targetRotateX = ((centerY - y) / centerY) * config.intensity;
+
+            if (!frame) {
+                frame = window.requestAnimationFrame(applyParallax);
+            }
+        }, {
+            passive: true
+        });
+
+        card.addEventListener('pointerleave', function () {
+            targetRotateX = 0;
+            targetRotateY = 0;
+
+            if (frame) {
+                window.cancelAnimationFrame(frame);
+                frame = null;
+            }
+
+            card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+}
 
         /*
             ==========================================================

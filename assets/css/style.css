@@ -7899,4 +7899,307 @@ body.mobile-menu-open {
     .hero-mobile-bot-head .material-symbols-outlined {
         font-size: 62px;
     }
+    /* ==========================================================
+   MOBILE PERFORMANCE MODE
+   Quita parallax, piezas flotantes, canvas pesado y animaciones
+   Solo aplica en móvil. Escritorio queda igual.
+   ========================================================== */
+
+@media (max-width: 768px) {
+
+    /*
+        Menos costo visual global en móvil
+    */
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+    }
+
+    /*
+        NO parallax visual en móvil
+    */
+    [data-obrero-parallax],
+    [data-bit-parallax],
+    [data-zipa-parallax],
+    [data-creatu-parallax] {
+        transform: none !important;
+        transform-style: flat !important;
+        perspective: none !important;
+        will-change: auto !important;
+    }
+
+    /*
+        Oculta piezas visuales pesadas de cada emprendimiento
+    */
+    .obrero-cup-stage,
+    .obrero-floating-badge,
+    .bit-spa-stage,
+    .bit-floating-badge,
+    .zipa-dashboard-stage,
+    .zipa-floating-badge,
+    .creatu-studio-stage,
+    .creatu-floating-badge,
+    .creatu-mini-mockup,
+    .zipa-dashboard-card,
+    .bit-water-stream,
+    .bit-halo,
+    .creatu-orbit,
+    .zipa-orbit {
+        display: none !important;
+    }
+
+    /*
+        Convierte las zonas visuales en tarjetas simples
+    */
+    .obrero-visual,
+    .bit-visual,
+    .zipa-visual,
+    .creatu-visual {
+        min-height: auto !important;
+        width: 100%;
+        padding: 0;
+        display: block;
+        overflow: visible;
+    }
+
+    .obrero-visual-text,
+    .bit-visual-text,
+    .zipa-visual-text,
+    .creatu-visual-text {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        top: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-top: 4px;
+        text-align: left;
+        padding: 20px;
+        border-radius: 24px;
+        background:
+            linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.060),
+                rgba(255, 255, 255, 0.026)
+            );
+        border: 1px solid rgba(255, 255, 255, 0.10);
+        box-shadow:
+            0 18px 44px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+
+    .obrero-visual-text span,
+    .bit-visual-text span,
+    .zipa-visual-text span,
+    .creatu-visual-text span {
+        font-size: 11px;
+        line-height: 1.2;
+    }
+
+    .obrero-visual-text p,
+    .bit-visual-text p,
+    .zipa-visual-text p,
+    .creatu-visual-text p {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /*
+        Menos blur y menos sombras en móvil
+    */
+    .glass-card,
+    .nav-bubble,
+    .mobile-menu-button,
+    .mobile-menu-panel,
+    .spline-hero-card,
+    .obrero-main-card,
+    .bit-main-card,
+    .zipa-main-card,
+    .creatu-main-card,
+    .obrero-feature-card,
+    .bit-feature-card,
+    .zipa-feature-card,
+    .creatu-feature-card,
+    .obrero-bottom-card,
+    .bit-diagnosis-card,
+    .bit-special-card,
+    .bit-bottom-card,
+    .zipa-stack-card,
+    .zipa-method-card,
+    .zipa-bottom-card,
+    .creatu-process-card,
+    .creatu-special-card,
+    .creatu-bottom-card,
+    .particle-outro-card,
+    .footer-scroll-card {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+        box-shadow:
+            0 18px 44px rgba(0, 0, 0, 0.24),
+            inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+    }
+
+    /*
+        Reduce brillos grandes costosos
+    */
+    .obrero-bg-orb,
+    .bit-bg-orb,
+    .zipa-bg-orb,
+    .creatu-bg-orb,
+    .particle-outro-orb,
+    .footer-orb,
+    .hero-orb-one,
+    .spline-glow,
+    .obrero-card-glow,
+    .bit-card-glow,
+    .zipa-card-glow,
+    .creatu-card-glow,
+    .particle-outro-card-glow,
+    .creatu-paint-light,
+    .bit-water-light {
+        display: none !important;
+    }
+
+    /*
+        Quita brillos animados tipo shine
+    */
+    .obrero-main-card::before,
+    .bit-main-card::before,
+    .zipa-main-card::before,
+    .creatu-main-card::before,
+    .particle-outro-card::before,
+    .mobile-menu-panel::before,
+    .creatu-product-image-wrap::after {
+        display: none !important;
+    }
+
+    /*
+        Footer 3D más simple en móvil
+    */
+    .footer-scroll-title,
+    .footer-scroll-card {
+        opacity: 1 !important;
+        transform: none !important;
+        filter: none !important;
+        transition: none !important;
+        will-change: auto !important;
+    }
+
+    .footer-scroll-section {
+        min-height: auto !important;
+    }
+
+    /*
+        Particle outro: sin canvas en móvil.
+        Se muestra fallback liviano.
+    */
+    .particle-text-canvas {
+        display: none !important;
+    }
+
+    .particle-canvas-wrap {
+        min-height: 240px !important;
+    }
+
+    .particle-canvas-fallback {
+        z-index: 3;
+    }
+
+    .particle-canvas-fallback h3 {
+        color: rgba(255, 255, 255, 0.14);
+        font-size: clamp(34px, 11vw, 54px);
+    }
+
+    .particle-canvas-fallback p {
+        color: rgba(191, 202, 186, 0.42);
+        font-size: 11px;
+    }
+
+    /*
+        Reveal más barato en móvil: sin blur
+    */
+    .reveal-section,
+    .obrero-reveal,
+    .bit-reveal,
+    .zipa-reveal,
+    .creatu-reveal,
+    .particle-outro-reveal {
+        filter: none !important;
+        transition:
+            opacity 420ms ease,
+            transform 420ms ease !important;
+        will-change: auto !important;
+    }
+
+    /*
+        Desactiva efectos hover que no aportan en touch
+    */
+    .obrero-feature-card:hover,
+    .bit-feature-card:hover,
+    .zipa-feature-card:hover,
+    .creatu-feature-card:hover,
+    .obrero-contact-item:hover,
+    .bit-contact-item:hover,
+    .zipa-contact-item:hover,
+    .creatu-contact-item:hover,
+    .creatu-special-item:hover,
+    .bit-special-item:hover,
+    .zipa-method-step:hover,
+    .creatu-process-step:hover,
+    .hero-cta-button:hover,
+    .obrero-main-button:hover,
+    .bit-main-button:hover,
+    .zipa-main-button:hover,
+    .creatu-main-button:hover {
+        transform: none !important;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /*
+        Tarjetas principales más compactas en celulares pequeños
+    */
+    .obrero-main-layout,
+    .bit-main-layout,
+    .zipa-main-layout,
+    .creatu-main-layout {
+        padding: 24px 18px !important;
+        gap: 26px !important;
+    }
+
+    .obrero-section,
+    .bit-section,
+    .zipa-section,
+    .creatu-section,
+    .particle-outro-section,
+    .footer-scroll-section {
+        padding-left: 14px !important;
+        padding-right: 14px !important;
+    }
+
+    .obrero-feature-card,
+    .bit-feature-card,
+    .zipa-feature-card,
+    .creatu-feature-card,
+    .obrero-bottom-card,
+    .bit-diagnosis-card,
+    .bit-special-card,
+    .bit-bottom-card,
+    .zipa-stack-card,
+    .zipa-method-card,
+    .zipa-bottom-card,
+    .creatu-process-card,
+    .creatu-special-card,
+    .creatu-bottom-card {
+        padding: 22px !important;
+    }
+}
 }
