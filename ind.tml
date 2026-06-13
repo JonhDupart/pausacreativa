@@ -1,0 +1,3185 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+
+    <title>Pausa Creativa | Experiencia Colaborativa</title>
+
+    <meta
+        name="description"
+        content="Pausa Creativa es una experiencia colaborativa que une café, bienestar, diseño personalizado y tecnología digital en el Stand Outlet Arauco Sopó."
+    />
+
+    <meta name="theme-color" content="#111317" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- Preconexiones para acelerar fuentes y recursos externos -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+
+    <!-- Imágenes externas usadas en el sitio -->
+    <link rel="preconnect" href="https://lh3.googleusercontent.com" crossorigin />
+    <link rel="dns-prefetch" href="https://lh3.googleusercontent.com" />
+
+    <!-- Tailwind CDN -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "secondary-fixed-dim": "#ffb691",
+                        "on-surface-variant": "#bfcaba",
+                        "surface-container-lowest": "#0c0e12",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#333539",
+                        "tertiary-fixed-dim": "#00daf3",
+                        "surface-dim": "#111317",
+                        "surface-container": "#1e2024",
+                        "surface-tint": "#88d982",
+                        "inverse-on-surface": "#2f3035",
+                        "on-primary-fixed": "#002204",
+                        "surface": "#111317",
+                        "on-background": "#e2e2e8",
+                        "background": "#111317",
+                        "on-secondary-container": "#5d2400",
+                        "tertiary": "#00daf3",
+                        "on-primary-fixed-variant": "#005312",
+                        "inverse-surface": "#e2e2e8",
+                        "primary-container": "#2e7d32",
+                        "on-primary": "#003909",
+                        "on-secondary-fixed": "#341100",
+                        "primary-fixed-dim": "#88d982",
+                        "on-tertiary": "#00363d",
+                        "on-primary-container": "#cbffc2",
+                        "outline-variant": "#40493d",
+                        "tertiary-fixed": "#9cf0ff",
+                        "secondary": "#ffb691",
+                        "surface-container-high": "#282a2e",
+                        "secondary-container": "#ff751b",
+                        "on-tertiary-fixed": "#001f24",
+                        "on-secondary": "#552000",
+                        "on-tertiary-container": "#d3f8ff",
+                        "outline": "#8a9485",
+                        "on-error": "#690005",
+                        "on-secondary-fixed-variant": "#793100",
+                        "secondary-fixed": "#ffdbcb",
+                        "on-tertiary-fixed-variant": "#004f58",
+                        "primary": "#88d982",
+                        "tertiary-container": "#007987",
+                        "primary-fixed": "#a3f69c",
+                        "surface-container-low": "#1a1c20",
+                        "on-error-container": "#ffdad6",
+                        "on-surface": "#e2e2e8",
+                        "inverse-primary": "#1b6d24",
+                        "surface-container-highest": "#333539",
+                        "error-container": "#93000a",
+                        "surface-bright": "#37393e"
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.25rem",
+                        lg: "0.5rem",
+                        xl: "0.75rem",
+                        full: "9999px"
+                    },
+                    spacing: {
+                        unit: "8px",
+                        "stack-lg": "80px",
+                        "margin-mobile": "20px",
+                        "container-max": "1280px",
+                        gutter: "24px",
+                        "stack-md": "48px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter", "system-ui", "sans-serif"],
+                        "headline-lg-mobile": ["Geist", "Inter", "system-ui", "sans-serif"],
+                        "headline-lg": ["Geist", "Inter", "system-ui", "sans-serif"],
+                        "display-xl": ["Geist", "Inter", "system-ui", "sans-serif"],
+                        "body-lg": ["Inter", "system-ui", "sans-serif"],
+                        "label-sm": ["JetBrains Mono", "monospace"],
+                        "headline-md": ["Geist", "Inter", "system-ui", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "headline-lg-mobile": ["32px", { lineHeight: "1.2", fontWeight: "700" }],
+                        "headline-lg": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "700" }],
+                        "display-xl": ["80px", { lineHeight: "1.1", letterSpacing: "-0.04em", fontWeight: "800" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.0", letterSpacing: "0.05em", fontWeight: "500" }],
+                        "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "600" }]
+                    }
+                }
+            }
+        };
+    </script>
+
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,container-queries">
+    </script>
+
+    <!-- Fuentes principales -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Geist:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- Íconos Material Symbols -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet"
+    />
+
+    <!-- CSS principal externo: mueve aquí todo tu bloque <style> grande -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Precarga opcional de imagen importante NO móvil.
+         Úsalo solo si tienes una imagen principal propia del hero.
+         Si el hero usa Spline, no precargues imágenes aquí. -->
+    <!--
+    <link
+        rel="preload"
+        as="image"
+        href="./assets/img/hero-mobile.webp"
+        fetchpriority="high"
+    />
+    -->
+
+</head>
+
+<body class="bg-background text-on-background font-body-md selection:bg-primary selection:text-on-primary overflow-x-hidden">
+
+    <!-- TopNavBar -->
+
+<!-- TopNavBar estilo Spline / glass más transparente -->
+<header class="px-4 lg:px-0 fixed top-0 left-0 w-full z-50 px-margin-mobile md:px-gutter pt-5">
+
+    <nav class="relative max-w-[1210px] mx-auto flex items-center justify-between gap-4">
+
+        <!-- Burbuja izquierda: SOLO logo / nombre -->
+        <div class="nav-bubble nav-bubble-logo-only">
+
+            <a href="#hero" class="nav-brand" aria-label="Ir al inicio de Pausa Creativa">
+                <span class="nav-brand-mark">
+                   <div class="bit-logo-ion">
+    <img 
+        src="/logo-pagina.png" 
+        alt="Ícono de Mi Llave O.B" 
+        loading="lazy" 
+        decoding="async" 
+        class="w-full h-full object-cover"
+    />
+</div>
+                </span>
+
+                <span class="nav-brand-text">
+                    Pausa Creativa
+                </span>
+            </a>
+
+        </div>
+
+        <!-- Burbuja derecha: SOLO los 4 emprendimientos -->
+        <div class="nav-bubble nav-bubble-projects">
+
+            <a href="#obrero" class="nav-pill-link">
+                Obrero Café
+            </a>
+
+            <a href="#bitandbloom" class="nav-pill-link">
+                Bit and Bloom
+            </a>
+
+            <a href="#creatuportada" class="nav-pill-link">
+                Crea tu Portada
+            </a>
+
+            <a href="#zipaquira" class="nav-pill-link ">
+                Zipaquirá Digital
+            </a>
+
+        </div>
+
+        <!-- Botón hamburguesa mobile -->
+        <button class="mobile-menu-button" id="mobileMenuButton" type="button" aria-label="Abrir menú" aria-expanded="false">
+            <span class="hamburger-line hamburger-line-one"></span>
+            <span class="hamburger-line hamburger-line-two"></span>
+        </button>
+
+        <!-- Menú mobile -->
+        <div class="mobile-menu-panel" id="mobileMenuPanel">
+
+            <div class="mobile-menu-header">
+
+                <div class="mobile-menu-brand">
+                    <span class="nav-brand-mark">
+                        <span class="material-symbols-outlined">
+                            auto_awesome
+                        </span>
+                    </span>
+
+                    <span>
+                        Pausa Creativa
+                    </span>
+                </div>
+
+                <span class="mobile-menu-label">
+                    Menú
+                </span>
+
+            </div>
+
+            <div class="mobile-menu-links">
+
+
+                <a href="#obrero" class="mobile-menu-link">
+                    <span class="mobile-link-number">
+                        01
+                    </span>
+
+                    <span>
+                        Obrero Café
+                    </span>
+                </a>
+
+                <a href="#bitandbloom" class="mobile-menu-link">
+                    <span class="mobile-link-number">
+                        02
+                    </span>
+
+                    <span>
+                        Bit and Bloom
+                    </span>
+                </a>
+
+                <a href="#creatuportada" class="mobile-menu-link">
+                    <span class="mobile-link-number">
+                        03
+                    </span>
+
+                    <span>
+                        Crea tu Portada
+                    </span>
+                </a>
+
+                <a href="#zipaquira" class="mobile-menu-link">
+                    <span class="mobile-link-number">
+                        04
+                    </span>
+
+                    <span>
+                        Zipaquirá Digital
+                    </span>
+                </a>
+
+            </div>
+
+            <div class="mobile-menu-footer">
+                <p>
+                    Una pausa puede inspirar una idea.
+                </p>
+            </div>
+
+        </div>
+
+    </nav>
+
+</header>
+    <!-- Hero Section adaptado con Spline + spotlight -->
+<section class="relative pt-24 pb-stack-lg overflow-hidden" id="hero">
+
+    <div class="hero-orb-one"></div>
+
+    <div class="px-4 lg:px-24 mx-auto px-margin-mobile  relative z-10">
+
+        <div class="spline-hero-card min-h-[620px]">
+
+            <!-- Canvas 3D: en escritorio carga Spline; en móvil NO carga nada pesado -->
+            <div
+                class="spline-full-canvas"
+                id="heroSplineMount"
+                data-spline-url="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode">
+
+                <div class="spline-gl"></div>
+
+                <div class="spline-visual-frame" id="heroSplineFrame">
+                    <!-- El spline-viewer se inyecta aquí solo en escritorio -->
+                </div>
+
+            </div>
+
+            <!-- Fondo liviano solo para móvil -->
+            <div class="hero-mobile-fallback" aria-hidden="true">
+
+                <div class="hero-mobile-fallback-orb hero-mobile-fallback-orb-one"></div>
+                <div class="hero-mobile-fallback-orb hero-mobile-fallback-orb-two"></div>
+                <div class="hero-mobile-fallback-grid"></div>
+
+                <div class="hero-mobile-bot-shape">
+
+                    <div class="hero-mobile-bot-head">
+                        <span class="material-symbols-outlined">
+                            smart_toy
+                        </span>
+                    </div>
+
+                    <div class="hero-mobile-bot-glow"></div>
+
+                </div>
+
+            </div>
+
+            <!-- Capas visuales encima del canvas -->
+            <div class="hero-grid-pattern"></div>
+            <div class="spline-readable-overlay"></div>
+            <div class="mouse-spotlight"></div>
+
+            <!-- Contenido centrado encima del canvas -->
+            <div class="hero-content-layer">
+
+                <div class="hero-content-inner">
+
+                    <div class="hero-content-stack">
+
+                        <span class="hero-kicker-pill">
+                            <span class="hero-kicker-dot"></span>
+                            Stand Outlet Arauco Sopó
+                        </span>
+
+                        <div class="hero-title-block">
+
+                            <h1 class="hero-main-title">
+                                Una pausa puede
+
+                                <span class="hero-gradient-title">
+                                    inspirar una idea.
+                                </span>
+                            </h1>
+
+                            <p class="hero-main-description">
+                                Pausa Creativa es el concepto que une nuestro stand colaborativo.
+                                Un espacio donde el bienestar, la creatividad, la productividad y la innovación
+                                se encuentran para transformar proyectos.
+                            </p>
+
+                        </div>
+
+                        <div class="hero-actions">
+                            <a class="hero-cta-button" href="#startups">
+                                Conocer los emprendimientos
+
+                                <span class="material-symbols-outlined">
+                                    arrow_forward
+                                </span>
+                            </a>
+                        </div>
+
+                        <div class="hero-stats-grid">
+
+                            <div class="hero-stat-card">
+                                <p class="hero-stat-number hero-stat-green">
+                                    01
+                                </p>
+
+                                <p class="hero-stat-text">
+                                    Bienestar y descanso creativo.
+                                </p>
+                            </div>
+
+                            <div class="hero-stat-card">
+                                <p class="hero-stat-number hero-stat-orange">
+                                    02
+                                </p>
+
+                                <p class="hero-stat-text">
+                                    Ideas colaborativas con propósito.
+                                </p>
+                            </div>
+
+                            <div class="hero-stat-card">
+                                <p class="hero-stat-number hero-stat-cyan">
+                                    03
+                                </p>
+
+                                <p class="hero-stat-text">
+                                    Experiencia digital e interactiva.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+    <!-- Secciones base para que funcionen los enlaces del menú -->
+    <main class="p-5">
+
+   <!-- Sección Obrero Café -->
+<section id="obrero" class="obrero-secti">
+
+   
+
+    <div class="obrero-container">
+
+
+        <div class="obrero-main-card obrero-reveal" data-obrero-parallax>
+
+            <div class="obrero-card-glow"></div>
+            <div class="obrero-card-grid"></div>
+
+            <div class="obrero-main-layout">
+
+                <!-- Columna izquierda -->
+                <div class="obrero-content">
+
+                    <div class="obrero-logo-card">
+
+                        <div class="bit-logo-icon">
+    <img 
+        src="/logobrero.png" 
+        alt="Ícono de Mi Llave O.B" 
+        loading="lazy" 
+        decoding="async" 
+        class="w-full h-auto object-contain"
+    />
+</div>
+
+                        <div>
+                            <p class="obrero-logo-small">
+                                Stand colaborativo
+                            </p>
+
+                            <h3 class="obrero-logo-title">
+                                Obrero Café
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="obrero-story">
+
+                        <p class="obrero-label">
+                            Nuestra historia
+                        </p>
+
+                        <h3>
+                            ¿Por qué elegir entre trabajar cómodo, encontrarse con otros o disfrutar un buen café?
+                        </h3>
+
+                        <p>
+                            Obrero Café nació a partir de esa pregunta. Su propuesta busca crear un espacio
+                            diferente al hogar y al trabajo, donde las personas puedan sentirse bienvenidas,
+                            conectar con otras, intercambiar ideas, aprender, descansar, jugar o simplemente
+                            disfrutar una pausa en medio de la rutina.
+                        </p>
+
+                        <p>
+                            La marca cree que los cafés tienen el poder de convertirse en puntos de encuentro
+                            que fortalecen vínculos entre vecinos, amigos, trabajadores remotos, estudiantes
+                            y emprendedores.
+                        </p>
+
+                    </div>
+
+                    <div class="obrero-actions">
+
+                        <a href="https://wa.me/573018175982" target="_blank" class="obrero-main-button">
+                            Contactar por WhatsApp
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </a>
+
+                      
+
+                    </div>
+
+                </div>
+
+                <!-- Columna derecha -->
+                <div class="obrero-visual">
+
+                    <div class="obrero-floating-badge obrero-floating-badge-one">
+                        <span class="material-symbols-outlined">
+                            diversity_3
+                        </span>
+                        Comunidad
+                    </div>
+
+                    <div class="obrero-floating-badge obrero-floating-badge-two">
+                        <span class="material-symbols-outlined">
+                            emoji_objects
+                        </span>
+                        Ideas
+                    </div>
+
+                    <div class="obrero-cup-stage">
+
+                        <div class="obrero-steam steam-one"></div>
+                        <div class="obrero-steam steam-two"></div>
+                        <div class="obrero-steam steam-three"></div>
+
+                        <div class="obrero-cup">
+
+                            <div class="obrero-cup-top"></div>
+                            <div class="obrero-cup-body">
+                                <span class="material-symbols-outlined">
+                                    settings
+                                </span>
+                            </div>
+                            <div class="obrero-cup-handle"></div>
+                            <div class="obrero-cup-plate"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="obrero-visual-text">
+
+                        <span>
+                            Tercer lugar
+                        </span>
+
+                        <p>
+                            Un punto de encuentro entre café, trabajo, descanso y conversación.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="obrero-experience-grid">
+
+            <article class="obrero-feature-card obrero-reveal">
+
+                <div class="obrero-feature-icon">
+                    <span class="material-symbols-outlined">
+                        coffee
+                    </span>
+                </div>
+
+                <p class="obrero-feature-number">
+                    01
+                </p>
+
+                <h3>
+                    Café de especialidad
+                </h3>
+
+                <p>
+                    Una propuesta pensada para quienes disfrutan el café como experiencia,
+                    pausa y punto de encuentro.
+                </p>
+
+            </article>
+
+            <article class="obrero-feature-card obrero-reveal">
+
+                <div class="obrero-feature-icon obrero-feature-icon-orange">
+                    <span class="material-symbols-outlined">
+                        bakery_dining
+                    </span>
+                </div>
+
+                <p class="obrero-feature-number obrero-feature-number-orange">
+                    02
+                </p>
+
+                <h3>
+                    Productos artesanales
+                </h3>
+
+                <p>
+                    Opciones poco comunes que invitan a descubrir nuevos sabores, como chipá,
+                    mate argentino y preparaciones con identidad.
+                </p>
+
+            </article>
+
+            <article class="obrero-feature-card obrero-reveal">
+
+                <div class="obrero-feature-icon obrero-feature-icon-cyan">
+                    <span class="material-symbols-outlined">
+                        water_drop
+                    </span>
+                </div>
+
+                <p class="obrero-feature-number obrero-feature-number-cyan">
+                    03
+                </p>
+
+                <h3>
+                    Bebidas saludables
+                </h3>
+
+                <p>
+                    Kéfir, infusiones y sodas naturales que amplían la experiencia más allá
+                    del café tradicional.
+                </p>
+
+            </article>
+
+            <article class="obrero-feature-card obrero-reveal">
+
+                <div class="obrero-feature-icon obrero-feature-icon-green">
+                    <span class="material-symbols-outlined">
+                        storefront
+                    </span>
+                </div>
+
+                <p class="obrero-feature-number">
+                    04
+                </p>
+
+                <h3>
+                    Productores locales
+                </h3>
+
+                <p>
+                    Trabajo con pequeños productores y emprendimientos locales, promoviendo
+                    consumo consciente y desarrollo comunitario.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="obrero-bottom-card obrero-reveal">
+
+            <div class="obrero-bottom-text">
+
+                <span class="obrero-label">
+                    Frase de marca
+                </span>
+
+                <h3>
+                    Una taza de café puede ser el inicio de una conversación, una idea, una amistad o un proyecto.
+                </h3>
+
+                <p>
+                    Obrero Café trabaja para que cada visitante encuentre un espacio donde sentirse bienvenido,
+                    inspirarse y disfrutar.
+                </p>
+
+            </div>
+
+            <div class="obrero-contact-grid">
+
+                <a href="https://www.instagram.com/obrerocafezipa" target="_blank" class="obrero-contact-item">
+                    <span class="material-symbols-outlined">
+                        photo_camera
+                    </span>
+
+                    <div>
+                        <p>
+                            Instagram
+                        </p>
+
+                        <strong>
+                            @obrerocafezipa
+                        </strong>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/obrerocafezipa" target="_blank" class="obrero-contact-item">
+                    <span class="material-symbols-outlined">
+                        thumb_up
+                    </span>
+
+                    <div>
+                        <p>
+                            Facebook
+                        </p>
+
+                        <strong>
+                            @obrerocafezipa
+                        </strong>
+                    </div>
+                </a>
+
+                <a href="https://wa.me/573018175982" target="_blank" class="obrero-contact-item">
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+
+                    <div>
+                        <p>
+                            WhatsApp
+                        </p>
+
+                        <strong>
+                            301 817 5982
+                        </strong>
+                    </div>
+                </a>
+
+                <div class="obrero-contact-item">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <div>
+                        <p>
+                            Dirección
+                        </p>
+
+                        <strong>
+                            Carrera 28 # 4-39, Barrio Las Villas, Zipaquirá
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Bit and Bloom Section (Image Right) -->
+<!-- Sección Bit & Bloom -->
+<section id="bitandbloom" class="pt-60">
+
+   
+    
+
+    <div class="bit-container">
+
+        
+
+        <div class="bit-main-card bit-reveal" data-bit-parallax>
+
+            <div class="bit-card-glow"></div>
+            <div class="bit-card-grid"></div>
+            <div class="bit-water-light"></div>
+
+            <div class="bit-main-layout">
+
+                <!-- Columna izquierda -->
+                <div class="bit-content">
+
+                    <div class="bit-logo-card">
+<div class="bit-logo-icon">
+    <img 
+        src="/logo-spa.png" 
+        alt="Ícono de Mi Llave O.B" 
+        loading="lazy" 
+        decoding="async" 
+        class="w-full h-auto object-contain"
+    />
+</div>
+
+                        <div>
+                            <p class="bit-logo-small">
+                                Head Spa
+                            </p>
+
+                            <h3 class="bit-logo-title">
+                                Bit & Bloom
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="bit-story">
+
+                        <p class="bit-label">
+                            ¿Por qué creamos Bit & Bloom?
+                        </p>
+
+                        <h3>
+                            El spa que tu cabello y tu mente estaban esperando, justo aquí en casa.
+                        </h3>
+
+                        <p>
+                            Bit & Bloom nació al identificar que en Zipaquirá no existía un lugar
+                            que reuniera en un solo espacio tecnología, técnicas coreanas auténticas
+                            y verdadera relajación. La propuesta rompe con el concepto tradicional
+                            para traer a la ciudad un santuario de bienestar.
+                        </p>
+
+                        <p>
+                            Aquí no solo se cuida el cabello desde la raíz; se crea un espacio para
+                            consentirte, relajarte y reconectar contigo a través de una experiencia
+                            personalizada, sensorial y profundamente restauradora.
+                        </p>
+
+                    </div>
+
+                    <div class="bit-actions">
+
+                        <a href="https://wa.me/573202514781" target="_blank" class="bit-main-button">
+                            Reservar por WhatsApp
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </a>
+
+                        <a href="https://www.instagram.com/bitandbloom_" target="_blank" class="bit-secondary-button">
+                            Ver Instagram
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Columna visual -->
+                <div class="bit-visual">
+
+                    <div class="bit-floating-badge bit-floating-badge-one">
+                        <span class="material-symbols-outlined">
+                            science
+                        </span>
+                        Capilógrafo
+                    </div>
+
+                    <div class="bit-floating-badge bit-floating-badge-two">
+                        <span class="material-symbols-outlined">
+                            water_drop
+                        </span>
+                        Vaporoterapia
+                    </div>
+
+                    <div class="bit-spa-stage">
+
+                        <div class="bit-halo bit-halo-one"></div>
+                        <div class="bit-halo bit-halo-two"></div>
+
+                        <div class="bit-water-stream bit-water-stream-one"></div>
+                        <div class="bit-water-stream bit-water-stream-two"></div>
+                        <div class="bit-water-stream bit-water-stream-three"></div>
+                        <div class="bit-water-stream bit-water-stream-four"></div>
+                        <div class="bit-water-stream bit-water-stream-five"></div>
+
+                        <div class="bit-spa-device">
+
+                            <div class="bit-device-arch"></div>
+
+                            <div class="bit-head-rest">
+                                <span class="material-symbols-outlined">
+                                    self_improvement
+                                </span>
+                            </div>
+
+                            <div class="bit-water-bowl">
+                                <div class="bit-water-surface"></div>
+                                <div class="bit-water-shine"></div>
+                            </div>
+
+                            <div class="bit-device-base"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="bit-visual-text">
+
+                        <span>
+                            Diagnóstico científico capilar
+                        </span>
+
+                        <p>
+                            Personalización mediante capilógrafo de alta tecnología y selección de activos
+                            según los hallazgos en vivo.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bit-diagnosis-card bit-reveal">
+
+            <div class="bit-diagnosis-left">
+
+                <span class="bit-label">
+                    Diagnóstico personalizado
+                </span>
+
+                <h3>
+                    En Bit & Bloom no adivinamos lo que tu cuero cabelludo necesita.
+                </h3>
+
+                <p>
+                    Lo descubrimos científicamente mediante el Capilógrafo de Alta Tecnología.
+                    Con los hallazgos en vivo, se seleccionan rigurosamente los activos ideales
+                    para cada sesión.
+                </p>
+
+            </div>
+
+            <div class="bit-diagnosis-right">
+
+                <div class="bit-scan-card">
+                    <div class="bit-scan-line"></div>
+
+                    <span class="material-symbols-outlined">
+                        biometric
+                    </span>
+
+                    <p>
+                        Análisis de cuero cabelludo
+                    </p>
+                </div>
+
+                <div class="bit-scan-card">
+                    <div class="bit-scan-line"></div>
+
+                    <span class="material-symbols-outlined">
+                        description
+                    </span>
+
+                    <p>
+                        Reporte evolutivo digital
+                    </p>
+                </div>
+
+                <div class="bit-scan-card">
+                    <div class="bit-scan-line"></div>
+
+                    <span class="material-symbols-outlined">
+                        local_florist
+                    </span>
+
+                    <p>
+                        Activos ideales para tu sesión
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="bit-experience-grid">
+
+            <article class="bit-feature-card bit-reveal">
+
+                <div class="bit-feature-icon">
+                    <span class="material-symbols-outlined">
+                        spa
+                    </span>
+                </div>
+
+                <p class="bit-feature-number">
+                    01
+                </p>
+
+                <h3>
+                    Head Spa Coreano & Aparatología Capilar
+                </h3>
+
+                <p>
+                    Estimulación profunda, detox capilar, masaje craneofacial y vaporoterapia
+                    para liberar por completo la tensión acumulada.
+                </p>
+
+            </article>
+
+            <article class="bit-feature-card bit-reveal">
+
+                <div class="bit-feature-icon bit-feature-icon-rose">
+                    <span class="material-symbols-outlined">
+                        self_improvement
+                    </span>
+                </div>
+
+                <p class="bit-feature-number bit-feature-number-rose">
+                    02
+                </p>
+
+                <h3>
+                    Masajes Relajantes Corporales
+                </h3>
+
+                <p>
+                    Terapias holísticas diseñadas para restaurar el perfecto equilibrio físico,
+                    emocional y mental.
+                </p>
+
+            </article>
+
+            <article class="bit-feature-card bit-reveal">
+
+                <div class="bit-feature-icon bit-feature-icon-gold">
+                    <span class="material-symbols-outlined">
+                        face_retouching_natural
+                    </span>
+                </div>
+
+                <p class="bit-feature-number bit-feature-number-gold">
+                    03
+                </p>
+
+                <h3>
+                    Limpieza Facial Profunda
+                </h3>
+
+                <p>
+                    Cuidado especializado y activos botánicos para lucir un rostro radiante,
+                    fresco y totalmente renovado.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="bit-special-card bit-reveal">
+
+            <div class="bit-special-header">
+
+                <div>
+                    <span class="bit-label">
+                        Experiencias especiales
+                    </span>
+
+                    <h3>
+                        Momentos diseñados para compartir bienestar.
+                    </h3>
+                </div>
+
+                <p>
+                    Rituales pensados para parejas, amigas, celebraciones y planes especiales,
+                    en un ambiente armónico, aromatizado y relajante.
+                </p>
+
+            </div>
+
+            <div class="bit-special-grid">
+
+                <article class="bit-special-item">
+                    <span class="material-symbols-outlined">
+                        favorite
+                    </span>
+
+                    <div>
+                        <h4>
+                            Spa en Parejas
+                        </h4>
+
+                        <p>
+                            Ritual compartido de relajación profunda e intimidad en un ambiente armónico.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="bit-special-item">
+                    <span class="material-symbols-outlined">
+                        group
+                    </span>
+
+                    <div>
+                        <h4>
+                            Spa para Amigas
+                        </h4>
+
+                        <p>
+                            Escenario ideal para conectar, conversar relajadamente y consentirse sin complicaciones.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="bit-special-item">
+                    <span class="material-symbols-outlined">
+                        celebration
+                    </span>
+
+                    <div>
+                        <h4>
+                            Celebración de Cumpleaños
+                        </h4>
+
+                        <p>
+                            Una forma especial de festejar la vida regalando bienestar y amor propio.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="bit-special-item">
+                    <span class="material-symbols-outlined">
+                        nightlife
+                    </span>
+
+                    <div>
+                        <h4>
+                            Noche de Chicas
+                        </h4>
+
+                        <p>
+                            Plan comfy para disfrutar un circuito express de servicios del spa.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="bit-bottom-card bit-reveal">
+
+            <div class="bit-bottom-text">
+
+                <span class="bit-label">
+                    Frase de marca
+                </span>
+
+                <h3>
+                    Encuentra la calma y el bienestar en el ritual de cuidar tu esencia.
+                </h3>
+
+                <p>
+                    Bit & Bloom combina cuidado capilar, ciencia, relajación y experiencias memorables
+                    para que cada visita se sienta como un ritual personal de renovación.
+                </p>
+
+            </div>
+
+            <div class="bit-contact-grid">
+
+                <a href="https://wa.me/573202514781" target="_blank" class="bit-contact-item">
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+
+                    <div>
+                        <p>
+                            WhatsApp
+                        </p>
+
+                        <strong>
+                            320 251 4781
+                        </strong>
+                    </div>
+                </a>
+
+                <a href="https://www.instagram.com/bitandbloom_" target="_blank" class="bit-contact-item">
+                    <span class="material-symbols-outlined">
+                        photo_camera
+                    </span>
+
+                    <div>
+                        <p>
+                            Instagram
+                        </p>
+
+                        <strong>
+                            @bitandbloom_
+                        </strong>
+                    </div>
+                </a>
+
+                <div class="bit-contact-item bit-contact-location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <div>
+                        <p>
+                            Ubicación
+                        </p>
+
+                        <strong>
+                            Calle 4A No 18-49, Barrio Algarra 3, Zipaquirá
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Crea tu Portada Section (Image Left) -->
+<!-- Sección Crea tu Portada -->
+<section id="creatuportada" class="pt-60">
+
+  
+
+    <div class="creatu-container">
+
+       
+
+        <div class="creatu-main-card creatu-reveal" data-creatu-parallax>
+
+            <div class="creatu-card-glow"></div>
+            <div class="creatu-card-grid"></div>
+            <div class="creatu-paint-light"></div>
+
+            <div class="creatu-main-layout">
+
+                <!-- Columna izquierda -->
+                <div class="creatu-content">
+
+                    <div class="creatu-logo-card">
+
+                        <div class="creatu-logo-icon">
+                            <span class="material-symbols-outlined">
+                                draw
+                            </span>
+                        </div>
+
+                        <div>
+                            <p class="creatu-logo-small">
+                                Studio creativo
+                            </p>
+
+                            <h3 class="creatu-logo-title">
+                                Crea tu Portada
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="creatu-story">
+
+                        <p class="creatu-label">
+                            Creatividad con propósito
+                        </p>
+
+                        <h3>
+                            Personalizar también es innovar: cada diseño cuenta una historia propia.
+                        </h3>
+
+                        <p>
+                            Crea tu Portada nace para dar voz a las ideas a través de objetos cotidianos
+                            transformados en piezas con identidad. Su concepto une sostenibilidad,
+                            diseño consciente y autoexpresión para que cada persona pueda crear algo
+                            único, funcional y significativo.
+                        </p>
+
+                        <p>
+                            En este espacio creativo, los mockups cobran vida para que proyectos,
+                            regalos, emprendimientos y detalles personalizados tengan una identidad
+                            visual auténtica, demostrando que la personalización es una forma poderosa
+                            de innovación humana.
+                        </p>
+
+                    </div>
+
+                    <div class="creatu-actions">
+
+                        <a href="#" class="creatu-main-button">
+                            Whastapp para personalizar tu idea
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+                <!-- Columna visual -->
+                <div class="creatu-visual">
+
+                    <div class="creatu-floating-badge creatu-floating-badge-one">
+                        <span class="material-symbols-outlined">
+                            auto_awesome
+                        </span>
+                        Mockups
+                    </div>
+
+                    <div class="creatu-floating-badge creatu-floating-badge-two">
+                        <span class="material-symbols-outlined">
+                            palette
+                        </span>
+                        Diseño
+                    </div>
+
+                    <div class="creatu-floating-badge creatu-floating-badge-three">
+                        <span class="material-symbols-outlined">
+                            recycling
+                        </span>
+                        Sostenible
+                    </div>
+
+                    <div class="creatu-studio-stage">
+
+                        <div class="creatu-orbit creatu-orbit-one"></div>
+                        <div class="creatu-orbit creatu-orbit-two"></div>
+
+                        <div class="creatu-product-card creatu-product-card-main">
+
+                            <div class="creatu-product-image-wrap">
+                                <img
+                                    src="/portada.jpg"
+                                    alt="Crea tu Portada Studio"
+                                    draggable="false"
+                                />
+                            </div>
+
+                            
+
+                        </div>
+
+                        <div class="creatu-mini-mockup creatu-mini-mockup-one">
+                            <span class="material-symbols-outlined">
+                                shopping_bag
+                            </span>
+
+                            <p>
+                                Regalos únicos
+                            </p>
+                        </div>
+
+                        <div class="creatu-mini-mockup creatu-mini-mockup-two">
+                            <span class="material-symbols-outlined">
+                                photo_library
+                            </span>
+
+                            <p>
+                                Identidad visual
+                            </p>
+                        </div>
+
+                        <div class="creatu-mini-mockup creatu-mini-mockup-three">
+                            <span class="material-symbols-outlined">
+                                design_services
+                            </span>
+
+                            <p>
+                                Arte aplicado
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="creatu-visual-text">
+
+                        <span>
+                            Personalización creativa
+                        </span>
+
+                        <p>
+                            Una experiencia donde las ideas pasan del mockup a objetos con identidad,
+                            valor emocional y diseño consciente.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="creatu-experiencia" class="creatu-experience-grid">
+
+            <article class="creatu-feature-card creatu-reveal">
+
+                <div class="creatu-feature-icon">
+                    <span class="material-symbols-outlined">
+                        psychology
+                    </span>
+                </div>
+
+                <p class="creatu-feature-number">
+                    01
+                </p>
+
+                <h3>
+                    Autoexpresión
+                </h3>
+
+                <p>
+                    Cada pieza se convierte en una forma de comunicar gustos, emociones,
+                    recuerdos, ideas y estilo personal.
+                </p>
+
+            </article>
+
+            <article class="creatu-feature-card creatu-reveal">
+
+                <div class="creatu-feature-icon creatu-feature-icon-orange">
+                    <span class="material-symbols-outlined">
+                        palette
+                    </span>
+                </div>
+
+                <p class="creatu-feature-number creatu-feature-number-orange">
+                    02
+                </p>
+
+                <h3>
+                    Diseño personalizado
+                </h3>
+
+                <p>
+                    Los mockups permiten visualizar, ajustar y transformar ideas en productos
+                    con una identidad gráfica clara y memorable.
+                </p>
+
+            </article>
+
+            <article class="creatu-feature-card creatu-reveal">
+
+                <div class="creatu-feature-icon creatu-feature-icon-cyan">
+                    <span class="material-symbols-outlined">
+                        redecorate
+                    </span>
+                </div>
+
+                <p class="creatu-feature-number creatu-feature-number-cyan">
+                    03
+                </p>
+
+                <h3>
+                    Objetos con historia
+                </h3>
+
+                <p>
+                    Elementos cotidianos adquieren valor simbólico cuando se transforman
+                    en piezas diseñadas desde una intención personal.
+                </p>
+
+            </article>
+
+            <article class="creatu-feature-card creatu-reveal">
+
+                <div class="creatu-feature-icon creatu-feature-icon-green">
+                    <span class="material-symbols-outlined">
+                        eco
+                    </span>
+                </div>
+
+                <p class="creatu-feature-number">
+                    04
+                </p>
+
+                <h3>
+                    Diseño consciente
+                </h3>
+
+                <p>
+                    La propuesta integra creatividad y sostenibilidad, promoviendo piezas
+                    pensadas con valor, propósito y uso significativo.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="creatu-process-card creatu-reveal">
+
+            <div class="creatu-process-header">
+
+                <div>
+                    <span class="creatu-label">
+                        Proceso creativo
+                    </span>
+
+                    <h3>
+                        De la idea al objeto: una experiencia visual, práctica y personalizada.
+                    </h3>
+                </div>
+
+                <p>
+                    Crea tu Portada acompaña el recorrido creativo desde la inspiración inicial,
+                    pasando por el diseño y el mockup, hasta llegar a una pieza final con identidad.
+                </p>
+
+            </div>
+
+            <div class="creatu-process-steps">
+
+                <div class="creatu-process-step">
+                    <span>
+                        01
+                    </span>
+
+                    <h4>
+                        Idea
+                    </h4>
+
+                    <p>
+                        Se parte de una emoción, concepto, regalo, proyecto o estilo personal.
+                    </p>
+                </div>
+
+                <div class="creatu-process-step">
+                    <span>
+                        02
+                    </span>
+
+                    <h4>
+                        Diseño
+                    </h4>
+
+                    <p>
+                        Se construye una propuesta visual coherente, atractiva y personalizada.
+                    </p>
+                </div>
+
+                <div class="creatu-process-step">
+                    <span>
+                        03
+                    </span>
+
+                    <h4>
+                        Mockup
+                    </h4>
+
+                    <p>
+                        La idea cobra vida mediante una visualización previa del producto.
+                    </p>
+                </div>
+
+                <div class="creatu-process-step">
+                    <span>
+                        04
+                    </span>
+
+                    <h4>
+                        Pieza final
+                    </h4>
+
+                    <p>
+                        El diseño se transforma en un objeto con identidad única y valor emocional.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="creatu-special-card creatu-reveal">
+
+            <div class="creatu-special-header">
+
+                <div>
+                    <span class="creatu-label">
+                        Aplicaciones
+                    </span>
+
+                    <h3>
+                        Personalización para regalos, proyectos y emprendimientos.
+                    </h3>
+                </div>
+
+                <p>
+                    La propuesta permite crear piezas visuales para diferentes necesidades:
+                    detalles personalizados, identidad para marcas, proyectos creativos,
+                    productos promocionales o regalos con intención.
+                </p>
+
+            </div>
+
+            <div class="creatu-special-grid">
+
+                <article class="creatu-special-item">
+                    <span class="material-symbols-outlined">
+                        redeem
+                    </span>
+
+                    <div>
+                        <h4>
+                            Regalos personalizados
+                        </h4>
+
+                        <p>
+                            Detalles únicos pensados para expresar afecto, memoria y estilo.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="creatu-special-item">
+                    <span class="material-symbols-outlined">
+                        business_center
+                    </span>
+
+                    <div>
+                        <h4>
+                            Proyectos y marcas
+                        </h4>
+
+                        <p>
+                            Piezas con identidad para emprendimientos, presentaciones y productos.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="creatu-special-item">
+                    <span class="material-symbols-outlined">
+                        collections_bookmark
+                    </span>
+
+                    <div>
+                        <h4>
+                            Portadas y mockups
+                        </h4>
+
+                        <p>
+                            Visualizaciones creativas que ayudan a imaginar el resultado final.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="creatu-special-item">
+                    <span class="material-symbols-outlined">
+                        brush
+                    </span>
+
+                    <div>
+                        <h4>
+                            Arte cotidiano
+                        </h4>
+
+                        <p>
+                            Objetos comunes transformados en piezas visuales con significado.
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+
+        </div>
+
+        <div class="creatu-bottom-card creatu-reveal">
+
+            <div class="creatu-bottom-text">
+
+                <span class="creatu-label">
+                    Frase de marca
+                </span>
+
+                <h3>
+                    Tus ideas también merecen una portada.
+                </h3>
+
+                <p>
+                    Crea tu Portada transforma creatividad, diseño y personalización en piezas
+                    memorables que conectan con la identidad de cada persona, proyecto o marca.
+                </p>
+
+            </div>
+
+            <div class="creatu-contact-grid">
+
+                <a href="#" class="creatu-contact-item">
+                    <span class="material-symbols-outlined">
+                        public
+                    </span>
+
+                    <div>
+                        <p>
+                            Web
+                        </p>
+
+                        <strong>
+                            Próximamente
+                        </strong>
+                    </div>
+                </a>
+
+                <a href="#" class="creatu-contact-item">
+                    <span class="material-symbols-outlined">
+                        mail
+                    </span>
+
+                    <div>
+                        <p>
+                            Contacto
+                        </p>
+
+                        <strong>
+                            Información por definir
+                        </strong>
+                    </div>
+                </a>
+
+                <div class="creatu-contact-item creatu-contact-location">
+                    <span class="material-symbols-outlined">
+                        auto_awesome
+                    </span>
+
+                    <div>
+                        <p>
+                            Concepto
+                        </p>
+
+                        <strong>
+                            Creatividad, personalización y diseño consciente
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Zipaquirá Digital Section (Image Right) -->
+<section id="zipaquira" class="pt-60">
+    <div class="zipa-container">
+
+    
+
+        <div class="zipa-main-card zipa-reveal" data-zipa-parallax>
+
+            <div class="zipa-card-glow"></div>
+            <div class="zipa-card-grid"></div>
+            <div class="zipa-code-rain"></div>
+
+            <div class="zipa-main-layout">
+
+                <!-- Columna izquierda -->
+                <div class="zipa-content">
+
+                    <div class="zipa-logo-card">
+
+                       <div class="bit-logo-icon">
+    <img 
+        src="/logozipaquira.png" 
+        alt="Ícono de Mi Llave O.B" 
+        loading="lazy" 
+        decoding="async" 
+        class="w-full h-auto object-contain"
+    />
+</div>
+
+                        <div>
+                            <p class="zipa-logo-small">
+                                John Duarte
+                            </p>
+
+                            <h3 class="zipa-logo-title">
+                                Zipaquirá Digital
+                            </h3>
+                        </div>
+
+                    </div>
+
+                    <div class="zipa-story">
+
+                        <p class="zipa-label">
+                            Desarrollo digital estratégico
+                        </p>
+
+                        <h3>
+                            No solo creamos páginas web: construimos soluciones que resuelven problemas reales.
+                        </h3>
+
+                        <p>
+                            Zipaquirá Digital combina diseño, programación, estrategia y tecnología para crear
+                            plataformas de alto rendimiento. El objetivo no es solo tener presencia digital,
+                            sino construir activos digitales capaces de generar confianza, leads, ventas,
+                            automatización y crecimiento.
+                        </p>
+
+                        <p>
+                            Desde sitios web profesionales hasta sistemas empresariales, plataformas LMS,
+                            e-commerce, dashboards, APIs e integraciones con inteligencia artificial, cada
+                            solución se plantea con arquitectura moderna, escalabilidad y enfoque en resultados.
+                        </p>
+
+                    </div>
+
+                    <div class="zipa-actions">
+
+                        <a href="https://zipaquiradigital.com/" target="_blank" class="zipa-main-button">
+                            Ver sitio web
+                            <span class="material-symbols-outlined">
+                                arrow_forward
+                            </span>
+                        </a>
+
+                       
+
+                    </div>
+
+                </div>
+
+                <!-- Columna visual -->
+                <div class="zipa-visual">
+
+                    <div class="zipa-floating-badge zipa-floating-badge-one">
+                        <span class="material-symbols-outlined">
+                            rocket_launch
+                        </span>
+                        Escalable
+                    </div>
+
+                    <div class="zipa-floating-badge zipa-floating-badge-two">
+                        <span class="material-symbols-outlined">
+                            psychology
+                        </span>
+                        IA
+                    </div>
+
+                    <div class="zipa-floating-badge zipa-floating-badge-three">
+                        <span class="material-symbols-outlined">
+                            query_stats
+                        </span>
+                        Analytics
+                    </div>
+
+                    <div class="zipa-dashboard-stage">
+
+                        <div class="zipa-orbit zipa-orbit-one"></div>
+                        <div class="zipa-orbit zipa-orbit-two"></div>
+
+                        <div class="zipa-terminal-card">
+
+                            <div class="zipa-terminal-top">
+
+                                <div class="zipa-terminal-dots">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+
+                                <p>
+                                    zipaquira.digital
+                                </p>
+
+                            </div>
+
+                            <div class="zipa-terminal-body">
+
+                                <div class="zipa-code-line">
+                                    <span class="zipa-code-green">const</span>
+                                    <span> negocio </span>
+                                    <span class="zipa-code-cyan">=</span>
+                                    <span class="zipa-code-white"> crecer()</span>
+                                </div>
+
+                                <div class="zipa-code-line">
+                                    <span class="zipa-code-purple">build</span>
+                                    <span>(web, software, data)</span>
+                                </div>
+
+                                <div class="zipa-code-line">
+                                    <span class="zipa-code-green">deploy</span>
+                                    <span class="zipa-code-white"> --cloud --seo --ai</span>
+                                </div>
+
+                                <div class="zipa-code-loader">
+                                    <span></span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="zipa-dashboard-card zipa-dashboard-card-one">
+                            <span class="material-symbols-outlined">
+                                shopping_cart
+                            </span>
+
+                            <div>
+                                <p>
+                                    E-commerce
+                                </p>
+
+                                <strong>
+                                    Tiendas que convierten
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="zipa-dashboard-card zipa-dashboard-card-two">
+                            <span class="material-symbols-outlined">
+                                school
+                            </span>
+
+                            <div>
+                                <p>
+                                    LMS
+                                </p>
+
+                                <strong>
+                                    Educación escalable
+                                </strong>
+                            </div>
+                        </div>
+
+                        <div class="zipa-dashboard-card zipa-dashboard-card-three">
+                            <span class="material-symbols-outlined">
+                                monitoring
+                            </span>
+
+                            <div>
+                                <p>
+                                    Dashboards
+                                </p>
+
+                                <strong>
+                                    Datos en tiempo real
+                                </strong>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="zipa-visual-text">
+
+                        <span>
+                            Desarrollo End-to-End
+                        </span>
+
+                        <p>
+                            Diagnóstico, arquitectura, diseño UI/UX, desarrollo, pruebas, despliegue,
+                            soporte y escalabilidad continua.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="zipa-marquee-card zipa-reveal">
+
+            <div class="zipa-marquee-track">
+                <span>Más Leads</span>
+                <span>Más Ventas</span>
+                <span>Más Escalabilidad</span>
+                <span>Desarrollo Web Estratégico</span>
+                <span>Tiendas Online que Convierten</span>
+                <span>Software a Medida</span>
+                <span>Asesorías</span>
+                <span>Más Leads</span>
+                <span>Más Ventas</span>
+                <span>Más Escalabilidad</span>
+                <span>Desarrollo Web Estratégico</span>
+                <span>Tiendas Online que Convierten</span>
+                <span>Software a Medida</span>
+                <span>Asesorías</span>
+            </div>
+
+        </div>
+
+        <div class="zipa-capabilities-grid">
+
+            <article class="zipa-feature-card zipa-reveal">
+
+                <div class="zipa-feature-icon">
+                    <span class="material-symbols-outlined">
+                        integration_instructions
+                    </span>
+                </div>
+
+                <p class="zipa-feature-number">
+                    01
+                </p>
+
+                <h3>
+                    Software a medida
+                </h3>
+
+                <p>
+                    ERPs, CRMs, sistemas empresariales, APIs, microservicios y soluciones únicas
+                    diseñadas para resolver fricciones específicas del negocio.
+                </p>
+
+            </article>
+
+            <article class="zipa-feature-card zipa-reveal">
+
+                <div class="zipa-feature-icon zipa-feature-icon-cyan">
+                    <span class="material-symbols-outlined">
+                        web
+                    </span>
+                </div>
+
+                <p class="zipa-feature-number zipa-feature-number-cyan">
+                    02
+                </p>
+
+                <h3>
+                    Web, UI/UX y E-commerce
+                </h3>
+
+                <p>
+                    Interfaces modernas, sitios web profesionales, tiendas online avanzadas,
+                    WordPress custom y experiencias enfocadas en usabilidad y conversión.
+                </p>
+
+            </article>
+
+            <article class="zipa-feature-card zipa-reveal">
+
+                <div class="zipa-feature-icon zipa-feature-icon-blue">
+                    <span class="material-symbols-outlined">
+                        database
+                    </span>
+                </div>
+
+                <p class="zipa-feature-number zipa-feature-number-blue">
+                    03
+                </p>
+
+                <h3>
+                    Datos, tracking y dashboards
+                </h3>
+
+                <p>
+                    Configuración de etiquetas, Google Tag Manager, Facebook CAPI,
+                    dashboards analíticos, visualización de métricas y seguimiento digital.
+                </p>
+
+            </article>
+
+            <article class="zipa-feature-card zipa-reveal">
+
+                <div class="zipa-feature-icon zipa-feature-icon-purple">
+                    <span class="material-symbols-outlined">
+                        smart_toy
+                    </span>
+                </div>
+
+                <p class="zipa-feature-number zipa-feature-number-purple">
+                    04
+                </p>
+
+                <h3>
+                    SEO, GEO e integración IA
+                </h3>
+
+                <p>
+                    Optimización avanzada para buscadores tradicionales, motores de IA,
+                    automatización inteligente y soluciones digitales preparadas para el futuro.
+                </p>
+
+            </article>
+
+        </div>
+
+        <div class="zipa-stack-card zipa-reveal">
+
+            <div class="zipa-stack-header">
+
+                <div>
+                    <span class="zipa-label">
+                        Stack tecnológico
+                    </span>
+
+                    <h3>
+                        Tecnología moderna para plataformas de alto rendimiento.
+                    </h3>
+                </div>
+
+                <p>
+                    Zipaquirá Digital trabaja con tecnologías actuales para construir sistemas rápidos,
+                    seguros, escalables y preparados para crecer.
+                </p>
+
+            </div>
+
+            <div class="zipa-stack-cloud">
+
+                <span>PHP / Laravel</span>
+                <span>JavaScript / TS</span>
+                <span>Astro / Next.js</span>
+                <span>PostgreSQL</span>
+                <span>WordPress Headless</span>
+                <span>AR Web / Three.js</span>
+                <span>APIs</span>
+                <span>SaaS</span>
+                <span>Cloud</span>
+                <span>IA</span>
+
+            </div>
+
+        </div>
+
+        <div class="zipa-method-card zipa-reveal">
+
+            <div class="zipa-method-intro">
+
+                <span class="zipa-label">
+                    Nuestro método
+                </span>
+
+                <h3>
+                    Un flujo riguroso para minimizar riesgos y maximizar calidad.
+                </h3>
+
+                <p>
+                    Cada proyecto se aborda con una ruta clara: entender el objetivo, diseñar la solución,
+                    construirla con buenas prácticas, probarla y acompañar su evolución.
+                </p>
+
+            </div>
+
+            <div class="zipa-method-steps">
+
+                <div class="zipa-method-step">
+                    <span>
+                        01
+                    </span>
+
+                    <h4>
+                        Diagnóstico
+                    </h4>
+
+                    <p>
+                        Análisis profundo de objetivos técnicos y necesidades reales.
+                    </p>
+                </div>
+
+                <div class="zipa-method-step">
+                    <span>
+                        02
+                    </span>
+
+                    <h4>
+                        Diseño
+                    </h4>
+
+                    <p>
+                        Arquitectura, interfaz y experiencia centrada en el usuario.
+                    </p>
+                </div>
+
+                <div class="zipa-method-step">
+                    <span>
+                        03
+                    </span>
+
+                    <h4>
+                        Desarrollo
+                    </h4>
+
+                    <p>
+                        Sprints ágiles, código limpio, integraciones y despliegue.
+                    </p>
+                </div>
+
+                <div class="zipa-method-step">
+                    <span>
+                        04
+                    </span>
+
+                    <h4>
+                        Pruebas
+                    </h4>
+
+                    <p>
+                        QA funcional, validación de flujos y control de calidad.
+                    </p>
+                </div>
+
+                <div class="zipa-method-step">
+                    <span>
+                        05
+                    </span>
+
+                    <h4>
+                        Soporte
+                    </h4>
+
+                    <p>
+                        Mantenimiento, optimización y escalabilidad continua.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="zipa-bottom-card zipa-reveal">
+
+            <div class="zipa-bottom-text">
+
+                <span class="zipa-label">
+                    Frase de marca
+                </span>
+
+                <h3>
+                    Tu próxima plataforma de alto rendimiento está a un solo mensaje de distancia.
+                </h3>
+
+                <p>
+                    Zipaquirá Digital impulsa negocios con consultoría técnica especializada,
+                    desarrollo web estratégico y soluciones digitales construidas para crecer.
+                </p>
+
+            </div>
+
+            <div class="zipa-contact-grid">
+
+                <a href="https://zipaquiradigital.com/" target="_blank" class="zipa-contact-item">
+                    <span class="material-symbols-outlined">
+                        language
+                    </span>
+
+                    <div>
+                        <p>
+                            Sitio web
+                        </p>
+
+                        <strong>
+                            zipaquiradigital.com
+                        </strong>
+                    </div>
+                </a>
+
+                <a href="https://www.facebook.com/zipadigital/" target="_blank" class="zipa-contact-item">
+                    <span class="material-symbols-outlined">
+                   hub</span>
+                    
+
+                    <div>
+                        <p>
+                            Redes Siciales
+                        </p>
+
+                        <strong>
+                            Consultoría técnica especializada
+                        </strong>
+                    </div>
+                </a>
+
+                <div class="zipa-contact-item zipa-contact-location">
+                    <span class="material-symbols-outlined">
+                        location_on
+                    </span>
+
+                    <div>
+                        <p>
+                            WhatsApp
+                        </p>
+
+                        <strong>
+                            +57 3195301551
+                        </strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- Sección final Particle Text -->
+<section id="pausa-final" class="particle-outro-seo py-40">
+
+    <div class="particle-outro-bg-grid"></div>
+    <div class="particle-outro-orb particle-outro-orb-one"></div>
+    <div class="particle-outro-orb particle-outro-orb-two"></div>
+
+    <div class="particle-outro-container">
+
+    
+
+        <div class="particle-outro-card particle-outro-reveal">
+
+            <div class="particle-outro-card-glow"></div>
+
+            <div class="particle-canvas-wrap">
+
+                <canvas
+                    id="particleTextCanvas"
+                    class="particle-text-canvas"
+                    aria-label="Texto animado de Pausa Creativa">
+                </canvas>
+
+                <div class="particle-canvas-fallback">
+                    <h3>
+                        PAUSA CREATIVA
+                    </h3>
+
+                    <p>
+                        Café · Bienestar · Diseño · Tecnología
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="particle-outro-caption">
+
+                <div>
+                    <span>
+                        Movimiento visual
+                    </span>
+
+                    <p>
+                        Las palabras cambian suavemente como partículas para representar los emprendimientos del stand.
+                    </p>
+                </div>
+
+                <a href="#hero" class="particle-outro-button">
+                    Volver al inicio
+                   
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    </main>
+
+<script>
+
+    (function () {
+        'use strict';
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        const supportsFinePointer = window.matchMedia('(pointer: fine)').matches;
+
+        /*
+            Utilidades globales.
+        */
+        const clamp = function (value, min, max) {
+            return Math.min(Math.max(value, min), max);
+        };
+
+        const lerp = function (start, end, progress) {
+            return start + (end - start) * progress;
+        };
+
+        const easeOutCubic = function (progress) {
+            return 1 - Math.pow(1 - progress, 3);
+        };
+
+        const qs = function (selector, scope = document) {
+            return scope.querySelector(selector);
+        };
+
+        const qsa = function (selector, scope = document) {
+            return Array.from(scope.querySelectorAll(selector));
+        };
+
+        /*
+            Inicializador principal.
+        */
+     function initPausaCreativa() {
+    initLazySplineHero();
+    initHeroSpotlight();
+    initRevealAnimations();
+    initParallaxCards();
+    initMobileMenu();
+    initParticleOutro();
+    initFooterScroll3D();
+}
+
+/*
+    ==========================================================
+    Hero Spline Lazy Load
+    ==========================================================
+    - En escritorio carga el script de Spline y luego la escena.
+    - En móvil NO carga ni el script ni el spline-viewer.
+    - Si el usuario cambia de tamaño a móvil, elimina la escena.
+*/
+function initLazySplineHero() {
+    const mount = qs('#heroSplineMount');
+    const frame = qs('#heroSplineFrame');
+
+    if (!mount || !frame) return;
+
+    const splineUrl = mount.getAttribute('data-spline-url');
+    const desktopQuery = window.matchMedia('(min-width: 769px)');
+    const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    let splineScriptLoading = false;
+    let splineScriptLoaded = Boolean(window.customElements && window.customElements.get('spline-viewer'));
+
+    function loadSplineScript(callback) {
+        if (splineScriptLoaded) {
+            callback();
+            return;
+        }
+
+        if (splineScriptLoading) {
+            const checkLoaded = window.setInterval(function () {
+                if (window.customElements && window.customElements.get('spline-viewer')) {
+                    window.clearInterval(checkLoaded);
+                    splineScriptLoaded = true;
+                    callback();
+                }
+            }, 80);
+
+            return;
+        }
+
+        splineScriptLoading = true;
+
+        const script = document.createElement('script');
+        script.type = 'module';
+        script.src = 'https://unpkg.com/@splinetool/viewer/build/spline-viewer.js';
+        script.onload = function () {
+            splineScriptLoaded = true;
+            splineScriptLoading = false;
+            callback();
+        };
+
+        script.onerror = function () {
+            splineScriptLoading = false;
+            mount.classList.remove('is-loading');
+        };
+
+        document.head.appendChild(script);
+    }
+
+    function createSplineViewer() {
+        if (!splineUrl) return;
+        if (frame.querySelector('spline-viewer')) return;
+
+        mount.classList.add('is-loading');
+
+        loadSplineScript(function () {
+            if (!desktopQuery.matches || reducedMotionQuery.matches) {
+                mount.classList.remove('is-loading');
+                return;
+            }
+
+            const viewer = document.createElement('spline-viewer');
+
+            viewer.className = 'hero-spline-viewer';
+            viewer.setAttribute('url', splineUrl);
+            viewer.setAttribute('events-target', 'global');
+
+            frame.appendChild(viewer);
+
+            window.setTimeout(function () {
+                mount.classList.remove('is-loading');
+            }, 1200);
+        });
+    }
+
+    function destroySplineViewer() {
+        const viewer = frame.querySelector('spline-viewer');
+
+        if (viewer) {
+            viewer.remove();
+        }
+
+        mount.classList.remove('is-loading');
+    }
+
+    function syncSplineState() {
+        if (desktopQuery.matches && !reducedMotionQuery.matches) {
+            createSplineViewer();
+        } else {
+            destroySplineViewer();
+        }
+    }
+
+    syncSplineState();
+
+    if (desktopQuery.addEventListener) {
+        desktopQuery.addEventListener('change', syncSplineState);
+        reducedMotionQuery.addEventListener('change', syncSplineState);
+    } else {
+        desktopQuery.addListener(syncSplineState);
+        reducedMotionQuery.addListener(syncSplineState);
+    }
+}
+
+
+        /*
+            ==========================================================
+            1. Spotlight del Hero Spline
+            ==========================================================
+        */
+        function initHeroSpotlight() {
+            const heroCard = qs('.spline-hero-card');
+
+            if (!heroCard || prefersReducedMotion || !supportsFinePointer) return;
+
+            let spotlightFrame = null;
+            let lastX = 0;
+            let lastY = 0;
+
+            function updateSpotlight() {
+                heroCard.style.setProperty('--spotlight-x', `${lastX}px`);
+                heroCard.style.setProperty('--spotlight-y', `${lastY}px`);
+                spotlightFrame = null;
+            }
+
+            heroCard.addEventListener('pointermove', function (event) {
+                const rect = heroCard.getBoundingClientRect();
+
+                lastX = event.clientX - rect.left;
+                lastY = event.clientY - rect.top;
+
+                if (!spotlightFrame) {
+                    spotlightFrame = window.requestAnimationFrame(updateSpotlight);
+                }
+            }, {
+                passive: true
+            });
+
+            heroCard.addEventListener('pointerleave', function () {
+                heroCard.style.setProperty('--spotlight-x', '50%');
+                heroCard.style.setProperty('--spotlight-y', '50%');
+            });
+        }
+
+        /*
+    ==========================================================
+    5. Particle Outro liviano
+    ==========================================================
+    Versión optimizada para index.html:
+    - Sin React.
+    - Sin librerías externas.
+    - Corre solo cuando entra en pantalla.
+    - Se pausa cuando sale de pantalla.
+    - Menos partículas en móvil.
+*/
+function initParticleOutro() {
+    /*
+        En móvil NO cargamos el canvas de partículas.
+        Esto evita:
+        - getContext('2d')
+        - creación de partículas
+        - requestAnimationFrame
+        - listeners del mouse
+        - consumo extra de memoria
+    */
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    if (isMobile) {
+        return;
+    }
+
+    const canvas = qs('#particleTextCanvas');
+    const section = qs('.particle-outro-section');
+
+    if (!canvas || !section) return;
+
+    const ctx = canvas.getContext('2d');
+
+    if (!ctx) return;
+
+    const maxParticles = 1250;
+    const pixelStep = 8;
+
+    const words = [
+        'PAUSA CREATIVA',
+        'OBRERO CAFÉ',
+        'BIT & BLOOM',
+        'CREA TU PORTADA',
+        'ZIPAQUIRÁ DIGITAL'
+    ];
+
+    let particles = [];
+    let animationId = null;
+    let active = false;
+    let wordIndex = 0;
+    let frame = 0;
+    let canvasWidth = 0;
+    let canvasHeight = 0;
+
+    let mouse = {
+        x: 0,
+        y: 0,
+        pressed: false
+    };
+
+  
+    function randomBetween(min, max) {
+        return Math.random() * (max - min) + min;
+    }
+
+    function resizeCanvas() {
+        const rect = canvas.getBoundingClientRect();
+        const ratio = Math.min(window.devicePixelRatio || 1, 1.5);
+
+        canvasWidth = Math.floor(rect.width * ratio);
+        canvasHeight = Math.floor(rect.height * ratio);
+
+        canvas.width = canvasWidth;
+        canvas.height = canvasHeight;
+
+        ctx.setTransform(1, 0, 0, 1, 0, 0);
+        buildWord(words[wordIndex], true);
+    }
+
+    function fitFontSize(text) {
+        const base = isMobile ? 54 : 88;
+        const min = isMobile ? 28 : 42;
+
+        let size = base;
+
+        ctx.font = `800 ${size}px Geist, Inter, Arial, sans-serif`;
+
+        while (ctx.measureText(text).width > canvasWidth * 0.82 && size > min) {
+            size -= 2;
+            ctx.font = `800 ${size}px Geist, Inter, Arial, sans-serif`;
+        }
+
+        return size;
+    }
+
+    function createParticle(x, y) {
+        const angle = Math.random() * Math.PI * 2;
+        const distance = Math.max(canvasWidth, canvasHeight) * randomBetween(0.45, 0.75);
+
+        return {
+            x: canvasWidth / 2 + Math.cos(angle) * distance,
+            y: canvasHeight / 2 + Math.sin(angle) * distance,
+            tx: x,
+            ty: y,
+            vx: 0,
+            vy: 0,
+            size: isMobile ? randomBetween(1.2, 2.1) : randomBetween(1.3, 2.4),
+            color: randomParticleColor(),
+            life: 1
+        };
+    }
+
+    function randomParticleColor() {
+        const palette = [
+            '136,217,130',
+            '0,218,243',
+            '255,182,145',
+            '226,226,232'
+        ];
+
+        return palette[Math.floor(Math.random() * palette.length)];
+    }
+
+    function buildWord(text, instant) {
+        const offscreen = document.createElement('canvas');
+        const offCtx = offscreen.getContext('2d');
+
+        if (!offCtx) return;
+
+        offscreen.width = canvasWidth;
+        offscreen.height = canvasHeight;
+
+        const fontSize = fitFontSize(text);
+
+        offCtx.clearRect(0, 0, canvasWidth, canvasHeight);
+        offCtx.fillStyle = '#ffffff';
+        offCtx.font = `800 ${fontSize}px Geist, Inter, Arial, sans-serif`;
+        offCtx.textAlign = 'center';
+        offCtx.textBaseline = 'middle';
+        offCtx.fillText(text, canvasWidth / 2, canvasHeight / 2);
+
+        const imageData = offCtx.getImageData(0, 0, canvasWidth, canvasHeight);
+        const data = imageData.data;
+        const targets = [];
+
+        for (let y = 0; y < canvasHeight; y += pixelStep) {
+            for (let x = 0; x < canvasWidth; x += pixelStep) {
+                const index = (y * canvasWidth + x) * 4;
+                const alpha = data[index + 3];
+
+                if (alpha > 120) {
+                    targets.push({
+                        x,
+                        y
+                    });
+                }
+            }
+        }
+
+        for (let i = targets.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const temp = targets[i];
+
+            targets[i] = targets[j];
+            targets[j] = temp;
+        }
+
+        const limitedTargets = targets.slice(0, maxParticles);
+        const nextParticles = [];
+
+        limitedTargets.forEach(function (target, index) {
+            let particle = particles[index];
+
+            if (!particle) {
+                particle = createParticle(target.x, target.y);
+            }
+
+            particle.tx = target.x;
+            particle.ty = target.y;
+            particle.color = randomParticleColor();
+            particle.life = 1;
+
+            if (instant) {
+                particle.x = target.x + randomBetween(-6, 6);
+                particle.y = target.y + randomBetween(-6, 6);
+                particle.vx = 0;
+                particle.vy = 0;
+            }
+
+            nextParticles.push(particle);
+        });
+
+        particles = nextParticles;
+    }
+
+    function drawBackground() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.18)';
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+
+        const gradient = ctx.createRadialGradient(
+            canvasWidth / 2,
+            canvasHeight / 2,
+            20,
+            canvasWidth / 2,
+            canvasHeight / 2,
+            canvasWidth * 0.48
+        );
+
+        gradient.addColorStop(0, 'rgba(136,217,130,0.10)');
+        gradient.addColorStop(0.48, 'rgba(0,218,243,0.05)');
+        gradient.addColorStop(1, 'rgba(0,0,0,0)');
+
+        ctx.fillStyle = gradient;
+        ctx.fillRect(0, 0, canvasWidth, canvasHeight);
+    }
+
+    function animate() {
+        if (!active) {
+            animationId = null;
+            return;
+        }
+
+        drawBackground();
+
+        for (let i = 0; i < particles.length; i++) {
+            const p = particles[i];
+
+            const dx = p.tx - p.x;
+            const dy = p.ty - p.y;
+
+            p.vx += dx * 0.012;
+            p.vy += dy * 0.012;
+
+            p.vx *= 0.82;
+            p.vy *= 0.82;
+
+            if (mouse.pressed) {
+                const mdx = p.x - mouse.x;
+                const mdy = p.y - mouse.y;
+                const dist = Math.sqrt(mdx * mdx + mdy * mdy);
+
+                if (dist < 70 && dist > 0) {
+                    const force = (70 - dist) / 70;
+                    p.vx += (mdx / dist) * force * 5;
+                    p.vy += (mdy / dist) * force * 5;
+                }
+            }
+
+            p.x += p.vx;
+            p.y += p.vy;
+
+            ctx.fillStyle = `rgba(${p.color}, 0.92)`;
+            ctx.fillRect(p.x, p.y, p.size, p.size);
+        }
+
+        frame++;
+
+        if (frame % 210 === 0) {
+            wordIndex = (wordIndex + 1) % words.length;
+            buildWord(words[wordIndex], false);
+        }
+
+        animationId = window.requestAnimationFrame(animate);
+    }
+
+    function start() {
+        if (active || prefersReducedMotion) return;
+
+        active = true;
+
+        if (!animationId) {
+            animationId = window.requestAnimationFrame(animate);
+        }
+    }
+
+    function stop() {
+        active = false;
+
+        if (animationId) {
+            window.cancelAnimationFrame(animationId);
+            animationId = null;
+        }
+    }
+
+    function updateMouse(event) {
+        const rect = canvas.getBoundingClientRect();
+        const ratioX = canvasWidth / rect.width;
+        const ratioY = canvasHeight / rect.height;
+
+        mouse.x = (event.clientX - rect.left) * ratioX;
+        mouse.y = (event.clientY - rect.top) * ratioY;
+    }
+
+    canvas.addEventListener('pointermove', updateMouse, {
+        passive: true
+    });
+
+    canvas.addEventListener('pointerdown', function (event) {
+        updateMouse(event);
+        mouse.pressed = true;
+    });
+
+    window.addEventListener('pointerup', function () {
+        mouse.pressed = false;
+    });
+
+    window.addEventListener('resize', function () {
+        resizeCanvas();
+    }, {
+        passive: true
+    });
+
+    resizeCanvas();
+
+    if (prefersReducedMotion) {
+        ctx.clearRect(0, 0, canvasWidth, canvasHeight);
+        ctx.fillStyle = '#88d982';
+        ctx.font = `800 ${isMobile ? 34 : 72}px Geist, Inter, Arial, sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('PAUSA CREATIVA', canvasWidth / 2, canvasHeight / 2);
+        return;
+    }
+
+    if ('IntersectionObserver' in window) {
+        const particleObserver = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    start();
+                } else {
+                    stop();
+                }
+            });
+        }, {
+            threshold: 0.25
+        });
+
+        particleObserver.observe(section);
+    } else {
+        start();
+    }
+}
+        /*
+            ==========================================================
+            2. Reveal animations generales
+            ==========================================================
+            Este observer reemplaza:
+            - reveal-section
+            - obrero-reveal
+            - bit-reveal
+
+            Cuando agreguemos otro emprendimiento, solo le ponemos una clase
+            tipo: creatu-reveal, zipa-reveal, etc., y la añadimos abajo.
+        */
+        function initRevealAnimations() {
+     const revealSelectors = [
+    '.reveal-section',
+    '.obrero-reveal',
+    '.bit-reveal',
+    '.zipa-reveal',
+    '.creatu-reveal',
+    '.particle-outro-reveal'
+
+            ];
+
+            const revealItems = qsa(revealSelectors.join(','));
+
+            if (!revealItems.length) return;
+
+            if (!('IntersectionObserver' in window) || prefersReducedMotion) {
+                revealItems.forEach(function (item) {
+                    item.classList.add('active');
+                });
+
+                return;
+            }
+
+            const revealObserver = new IntersectionObserver(function (entries, observer) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.16,
+                rootMargin: '0px 0px -8% 0px'
+            });
+
+            revealItems.forEach(function (item) {
+                revealObserver.observe(item);
+            });
+        }
+
+        /*
+            ==========================================================
+            3. Parallax 3D para tarjetas principales
+            ==========================================================
+            Reemplaza los scripts separados de:
+            - data-obrero-parallax
+            - data-bit-parallax
+        */
+function initParallaxCards() {
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+    /*
+        En móvil NO activamos parallax.
+        Esto evita cálculos con pointermove, requestAnimationFrame y transforms 3D.
+    */
+    if (isMobile || prefersReducedMotion || !supportsFinePointer) return;
+
+    const parallaxConfigs = [
+        {
+            selector: '[data-obrero-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-bit-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-zipa-parallax]',
+            intensity: 4
+        },
+        {
+            selector: '[data-creatu-parallax]',
+            intensity: 4
+        }
+    ];
+
+    parallaxConfigs.forEach(function (config) {
+        const card = qs(config.selector);
+
+        if (!card) return;
+
+        let frame = null;
+        let targetRotateX = 0;
+        let targetRotateY = 0;
+
+        function applyParallax() {
+            card.style.transform = `perspective(1200px) rotateX(${targetRotateX.toFixed(2)}deg) rotateY(${targetRotateY.toFixed(2)}deg)`;
+            frame = null;
+        }
+
+        card.addEventListener('pointermove', function (event) {
+            const rect = card.getBoundingClientRect();
+
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+
+            targetRotateY = ((x - centerX) / centerX) * config.intensity;
+            targetRotateX = ((centerY - y) / centerY) * config.intensity;
+
+            if (!frame) {
+                frame = window.requestAnimationFrame(applyParallax);
+            }
+        }, {
+            passive: true
+        });
+
+        card.addEventListener('pointerleave', function () {
+            targetRotateX = 0;
+            targetRotateY = 0;
+
+            if (frame) {
+                window.cancelAnimationFrame(frame);
+                frame = null;
+            }
+
+            card.style.transform = 'perspective(1200px) rotateX(0deg) rotateY(0deg)';
+        });
+    });
+}
+
+        /*
+            ==========================================================
+            4. Menú mobile moderno
+            ==========================================================
+        */
+        function initMobileMenu() {
+            const button = qs('#mobileMenuButton');
+            const panel = qs('#mobileMenuPanel');
+            const links = qsa('.mobile-menu-link');
+
+            if (!button || !panel) return;
+
+            function openMenu() {
+                button.classList.add('active');
+                panel.classList.add('active');
+                button.setAttribute('aria-expanded', 'true');
+                document.body.classList.add('mobile-menu-open');
+            }
+
+            function closeMenu() {
+                button.classList.remove('active');
+                panel.classList.remove('active');
+                button.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('mobile-menu-open');
+            }
+
+            function toggleMenu() {
+                const isOpen = panel.classList.contains('active');
+
+                if (isOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+            }
+
+            button.addEventListener('click', function (event) {
+                event.stopPropagation();
+                toggleMenu();
+            });
+
+            links.forEach(function (link) {
+                link.addEventListener('click', closeMenu);
+            });
+
+            document.addEventListener('click', function (event) {
+                const clickedInsidePanel = panel.contains(event.target);
+                const clickedButton = button.contains(event.target);
+
+                if (!clickedInsidePanel && !clickedButton) {
+                    closeMenu();
+                }
+            });
+
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    closeMenu();
+                }
+            });
+
+            window.addEventListener('resize', function () {
+                if (window.innerWidth > 1110) {
+                    closeMenu();
+                }
+            }, {
+                passive: true
+            });
+        }
+
+        /*
+            ==========================================================
+            5. Footer scroll 3D
+            ==========================================================
+        */
+        function initFooterScroll3D() {
+            const footerSection = qs('.footer-scroll-section');
+            const footerTitle = qs('.footer-scroll-title');
+            const footerCard = qs('.footer-scroll-card');
+
+            if (!footerSection || !footerTitle || !footerCard) return;
+
+            let ticking = false;
+
+            function setReducedFooter() {
+                footerTitle.style.opacity = '1';
+                footerTitle.style.transform = 'translateY(0px)';
+                footerTitle.style.filter = 'blur(0px)';
+
+                footerCard.style.opacity = '1';
+                footerCard.style.transform = 'translateY(0px) rotateX(0deg) scale(1)';
+                footerCard.style.filter = 'blur(0px)';
+            }
+
+            function updateFooterAnimation() {
+                if (prefersReducedMotion) {
+                    setReducedFooter();
+                    ticking = false;
+                    return;
+                }
+
+                const rect = footerSection.getBoundingClientRect();
+                const windowHeight = window.innerHeight;
+
+                /*
+                    Progreso:
+                    0 = footer apenas viene desde abajo.
+                    1 = footer llegó a su posición final.
+                */
+                const rawProgress = (windowHeight - rect.top) / (rect.height * 0.72);
+                const progress = clamp(rawProgress, 0, 1);
+                const easedProgress = easeOutCubic(progress);
+
+                const titleTranslate = lerp(140, 0, easedProgress);
+                const titleOpacity = lerp(0, 1, progress);
+                const titleBlur = lerp(18, 0, easedProgress);
+
+                const cardTranslate = lerp(220, 0, easedProgress);
+                const cardRotate = lerp(-24, 0, easedProgress);
+                const cardScale = lerp(0.78, 1, easedProgress);
+                const cardOpacity = lerp(0, 1, progress);
+                const cardBlur = lerp(18, 0, easedProgress);
+
+                footerTitle.style.opacity = titleOpacity.toFixed(3);
+                footerTitle.style.transform = `translateY(${titleTranslate.toFixed(2)}px)`;
+                footerTitle.style.filter = `blur(${titleBlur.toFixed(2)}px)`;
+
+                footerCard.style.opacity = cardOpacity.toFixed(3);
+                footerCard.style.transform = `translateY(${cardTranslate.toFixed(2)}px) rotateX(${cardRotate.toFixed(2)}deg) scale(${cardScale.toFixed(3)})`;
+                footerCard.style.filter = `blur(${cardBlur.toFixed(2)}px)`;
+
+                ticking = false;
+            }
+
+            function requestFooterTick() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateFooterAnimation);
+                    ticking = true;
+                }
+            }
+
+            window.addEventListener('scroll', requestFooterTick, {
+                passive: true
+            });
+
+            window.addEventListener('resize', requestFooterTick, {
+                passive: true
+            });
+
+            updateFooterAnimation();
+        }
+
+        /*
+            Ejecutar cuando el DOM esté listo.
+        */
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', initPausaCreativa);
+        } else {
+            initPausaCreativa();
+        }
+
+    })();
+</script>
+
+</body>
+</html>
