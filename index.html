@@ -505,7 +505,95 @@ html, body {
 
 
 <main class="pt-0 overflow-visible">
-    <section id="hero" class="relative min-h-screen flex flex-col items-center justify-start pt-32 md:pt-32 pb-12 overflow-visible w-full">
+  <style>
+/* ==========================================================
+   MODAL VIDEO - CENTRADO REAL EN MÓVIL
+   Mantiene escritorio igual y corrige iOS/Android cuando abre abajo.
+========================================================== */
+
+#video-modal.video-modal-mobile-safe {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100vw !important;
+    height: 100vh;
+    min-height: 100vh;
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+    overscroll-behavior: contain;
+    touch-action: none;
+}
+
+#video-modal.video-modal-mobile-safe.flex {
+    display: flex !important;
+}
+
+#video-modal.video-modal-mobile-safe .video-modal-box {
+    margin: auto !important;
+    transform: none !important;
+    max-height: calc(100vh - 2rem);
+}
+
+html.modal-open,
+body.modal-open {
+    overflow: hidden !important;
+}
+
+@supports (height: 100dvh) {
+    #video-modal.video-modal-mobile-safe {
+        height: 100dvh;
+        min-height: 100dvh;
+    }
+
+    #video-modal.video-modal-mobile-safe .video-modal-box {
+        max-height: calc(100dvh - 2rem);
+    }
+}
+
+@supports (height: 100svh) {
+    @media (max-width: 768px) {
+        #video-modal.video-modal-mobile-safe {
+            height: 100svh;
+            min-height: 100svh;
+        }
+
+        #video-modal.video-modal-mobile-safe .video-modal-box {
+            max-height: calc(100svh - 2rem);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    #video-modal.video-modal-mobile-safe {
+        top: 0 !important;
+        left: 0 !important;
+        right: auto !important;
+        bottom: auto !important;
+        padding: 1rem !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    #video-modal.video-modal-mobile-safe .video-modal-box {
+        width: 100% !important;
+        max-width: 100% !important;
+        aspect-ratio: 16 / 9;
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        margin: auto !important;
+    }
+
+    #close-video {
+        top: max(1rem, env(safe-area-inset-top)) !important;
+        right: max(1rem, env(safe-area-inset-right)) !important;
+    }
+}
+</style>
+
+ <section id="hero" class="relative min-h-screen flex flex-col items-center justify-start pt-32 md:pt-32 pb-12 overflow-visible w-full">
         <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 blur-[60px] rounded-full -translate-y-1/2 translate-x-1/4 pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary/10 blur-[60px] rounded-full translate-y-1/2 -translate-x-1/4 pointer-events-none"></div>
 
@@ -712,14 +800,140 @@ html, body {
             </div>
         </div>
 
-        <div id="video-modal" class="hidden fixed inset-0 z-[10000] bg-[#111d23]/95 backdrop-blur-md items-center justify-center transition-opacity duration-300 opacity-0 px-4">
-            <button id="close-video" class="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-primary transition-all z-[10010] p-2 cursor-pointer rounded-full bg-black/50 md:bg-transparent">
+        <div id="video-modal" class="video-modal-mobile-safe hidden fixed inset-0 z-[10000] bg-[#111d23]/95 backdrop-blur-md items-center justify-center transition-opacity duration-300 opacity-0 px-4">
+            <button id="close-video" class="absolute top-4 right-4 md:top-8 md:right-8 text-white hover:text-primary transition-all z-[10010] p-2 cursor-pointer rounded-full bg-black/60 md:bg-transparent w-10 h-10 flex items-center justify-center" type="button" aria-label="Cerrar video">
+                <span class="material-symbols-outlined text-2xl leading-none"></span>
             </button>
-            <div class="w-full max-w-[1000px] aspect-video bg-black rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/20 relative z-[10005]">
+            <div id="video-modal-box" class="video-modal-box w-full max-w-[1000px] aspect-video bg-black rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)] border border-white/20 relative z-[10005]">
                 <iframe id="video-iframe" class="w-full h-full absolute inset-0" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
     </section>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('video-modal');
+    const openBtn = document.getElementById('open-video');
+    const closeBtn = document.getElementById('close-video');
+    const iframe = document.getElementById('video-iframe');
+
+    const videoURL = "/video promocional feria.mp4";
+    let lastScrollY = 0;
+
+    if (!modal || !openBtn || !closeBtn || !iframe) return;
+
+    const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+    const syncMobileViewport = () => {
+        if (!isMobile()) {
+            modal.style.removeProperty('width');
+            modal.style.removeProperty('height');
+            modal.style.removeProperty('min-height');
+            modal.style.removeProperty('top');
+            modal.style.removeProperty('left');
+            return;
+        }
+
+        const vv = window.visualViewport;
+
+        if (vv) {
+            modal.style.width = `${vv.width}px`;
+            modal.style.height = `${vv.height}px`;
+            modal.style.minHeight = `${vv.height}px`;
+            modal.style.top = `${vv.offsetTop}px`;
+            modal.style.left = `${vv.offsetLeft}px`;
+        } else {
+            modal.style.width = '100vw';
+            modal.style.height = `${window.innerHeight}px`;
+            modal.style.minHeight = `${window.innerHeight}px`;
+            modal.style.top = '0px';
+            modal.style.left = '0px';
+        }
+    };
+
+    const lockPageScroll = () => {
+        lastScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+
+        document.documentElement.classList.add('modal-open');
+        document.body.classList.add('modal-open');
+
+        if (isMobile()) {
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${lastScrollY}px`;
+            document.body.style.left = '0';
+            document.body.style.right = '0';
+            document.body.style.width = '100%';
+        }
+    };
+
+    const unlockPageScroll = () => {
+        document.documentElement.classList.remove('modal-open');
+        document.body.classList.remove('modal-open');
+
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.left = '';
+        document.body.style.right = '';
+        document.body.style.width = '';
+
+        window.scrollTo(0, lastScrollY);
+    };
+
+    const openModal = (event) => {
+        event.preventDefault();
+
+        syncMobileViewport();
+        lockPageScroll();
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+
+        requestAnimationFrame(() => {
+            syncMobileViewport();
+            modal.classList.remove('opacity-0');
+        });
+
+        iframe.src = videoURL;
+    };
+
+    const closeModal = () => {
+        modal.classList.add('opacity-0');
+
+        setTimeout(() => {
+            modal.classList.add('hidden');
+            modal.classList.remove('flex');
+            iframe.src = "";
+            unlockPageScroll();
+            modal.style.removeProperty('width');
+            modal.style.removeProperty('height');
+            modal.style.removeProperty('min-height');
+            modal.style.removeProperty('top');
+            modal.style.removeProperty('left');
+        }, 250);
+    };
+
+    openBtn.addEventListener('click', openModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) closeModal();
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+            closeModal();
+        }
+    });
+
+    if (window.visualViewport) {
+        window.visualViewport.addEventListener('resize', syncMobileViewport);
+        window.visualViewport.addEventListener('scroll', syncMobileViewport);
+    }
+
+    window.addEventListener('resize', syncMobileViewport);
+});
+</script>
 
 <section class="py-24 md:py-40 relative overflow-visible " id="obrero-cafe">
     <div class="absolute -left-40 top-20 w-[600px] h-[600px] bg-primary/10 blur-[60px] rounded-full pointer-events-none"></div>
